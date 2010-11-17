@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:device="http://www.springframework.org/schema/mobile/device"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/mobile/device http://www.springframework.org/schema/mobile/device/spring-mobile-device-1.0.xsd">
+		 
+	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+
+	<!-- Configures the Spring MVC @Controller programming model -->
+	<annotation-driven />
+
+	<!-- Interceptors that execute common control logic across multiple requests -->
+	<interceptors>
+		<!-- WURFL-based device detection -->
+		<beans:bean class="org.springframework.mobile.device.mvc.DeviceResolvingHandlerInterceptor">
+			<beans:constructor-arg>
+				<device:wurfl-device-resolver root-location="/WEB-INF/wurfl/wurfl-2.0.25.zip" patch-locations="/WEB-INF/wurfl/web_browsers_patch.xml" />
+			</beans:constructor-arg>
+		</beans:bean>
+		<interceptor>
+			<!-- Redirects mobile users accessing the root home page to the "/mobile" URL -->
+			<!-- The order of this interceptor is significant (must be declared after the DeviceResolvingHandlerInterceptor) -->
+			<mapping path="/" />
+			<beans:bean class="org.springframework.mobile.device.mvc.MobileRedirectHandlerInterceptor">
+				<beans:constructor-arg value="/mobile" />
+				<beans:constructor-arg value="true" />
+			</beans:bean>
+		</interceptor>
+	</interceptors>
+
+	<!-- Adds in awareness of the Wurfl WNG component model for rendering JSP views that use WNG tags -->
+	<beans:bean class="org.springframework.mobile.device.wurfl.wng.WngViewResolver">
+		<beans:constructor-arg>
+			<!-- Resolves view names to jsp templates in the /WEB-INF/views directory -->
+			<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+				<beans:property name="prefix" value="/WEB-INF/views/" />	
+				<beans:property name="suffix" value=".jsp" />
+			</beans:bean>
+		</beans:constructor-arg>
+	</beans:bean>
+	
+	<!-- Imports the application controllers that process client requests -->
+	<beans:import resource="controllers.xml" />
+
+</beans:beans>
