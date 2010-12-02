@@ -14,21 +14,24 @@
 
 	<!-- Interceptors that execute common control logic across multiple requests -->
 	<interceptors>
-		<!-- WURFL-based device detection -->
+	
+		<!-- Detects the client's Device using WURFL -->
 		<beans:bean class="org.springframework.mobile.device.mvc.DeviceResolvingHandlerInterceptor">
 			<beans:constructor-arg>
 				<device:wurfl-device-resolver root-location="/WEB-INF/wurfl/wurfl-2.0.25.zip" patch-locations="/WEB-INF/wurfl/web_browsers_patch.xml" />
 			</beans:constructor-arg>
 		</beans:bean>
-		<interceptor>
-			<!-- Redirects mobile users accessing the root home page to the "/mobile" URL -->
-			<!-- The order of this interceptor is significant (must be declared after the DeviceResolvingHandlerInterceptor) -->
-			<mapping path="/" />
-			<beans:bean class="org.springframework.mobile.device.mvc.MobileRedirectHandlerInterceptor">
-				<beans:constructor-arg value="/mobile" />
-				<beans:constructor-arg value="true" />
-			</beans:bean>
-		</interceptor>
+		
+		<!-- Allows the client to indicate their site_preference, e.g. 'normal' or 'mobile', by submiting a query parameter;
+		     the preference value is saved in a cookie) -->
+		<beans:bean class="org.springframework.mobile.device.site.SitePreferenceResolvingHandlerInterceptor" />
+		
+		<!-- Redirects the client to their preferred site if necessary;
+		     this particular configuration redirects clients preferring the mobile site to 'm.localhost' -->
+		<beans:bean class="org.springframework.mobile.device.switcher.SiteSwitcherHandlerInterceptor" factory-method="mDot">
+			<beans:constructor-arg value="localhost" />
+		</beans:bean>
+		
 	</interceptors>
 
 	<!-- Adds in awareness of the Wurfl WNG component model for rendering JSP views that use WNG tags -->

@@ -8,7 +8,11 @@
 	</head>
 	<body>
 		<h2>Hello desktop user!</h2>
-		<p>Try switching your User-Agent to a mobile device and refreshing this page.  This is easy to do with the Firefox User Agent Switcher add-on.  Or just click <a href="${pageContext.request.contextPath}/mobile?UA=iPhone">this link</a> and use the UA request parameter.</p>
+		<p>
+			Try switching your User-Agent to a mobile device and refreshing this page.
+			This is easy to do with the Firefox User Agent Switcher add-on or Safari Develop menu.
+			Alternatively, just indicate a <a href="${pageContext.request.contextPath}?site_preference=mobile">mobile site preference</a>.
+		</p>
 		<p>Your browser:</p>
 		<ul>
 			<li>${currentDevice.userAgent}</li>

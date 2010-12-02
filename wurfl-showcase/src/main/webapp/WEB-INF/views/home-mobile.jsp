@@ -8,10 +8,8 @@
 	</head>
 	<body>
 		<h2>Hello mobile user!</h2>
-		<c:if test="${param['UA'] != null}">
-			<c:set var="UA" value="?UA=${param['UA']}" />
-		</c:if>
-		<p><a href="${pageContext.request.contextPath}/mobile/wng${UA}">View a mobile page</a> rendered by the WURFL "Wall NG" library</p>
+		<p><a href="${pageContext.request.contextPath}/wng">View a mobile page</a> rendered by the WURFL "Wall NG" library</p>
+		<p>Prefer the <a href="${pageContext.request.contextPath}?site_preference=normal">normal site</a> instead?
 		<p>Your mobile device:</p>
 		<ul>
 			<li>${currentDevice.userAgent}</li>
