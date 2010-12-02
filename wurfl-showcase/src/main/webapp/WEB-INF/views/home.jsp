@@ -4,15 +4,22 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Spring Mobile | Wurfl Showcase | Desktop Home</title>
+		<title>Spring Mobile | Wurfl Showcase | Normal Site Home</title>
 	</head>
 	<body>
-		<h2>Hello desktop user!</h2>
+		<h2>Hello normal user!</h2>
 		<p>
-			Try switching your User-Agent to a mobile device and refreshing this page.
-			This is easy to do with the Firefox User Agent Switcher add-on or Safari Develop menu.
-			Alternatively, just indicate a <a href="${pageContext.request.contextPath}?site_preference=mobile">mobile site preference</a>.
+			Prefer the <a href="${pageContext.request.contextPath}?site_preference=mobile">mobile site</a>?
 		</p>
+		<p>
+			If you have not indicated a site preference, try switching your User-Agent to a mobile device and refreshing this page.
+			This is easy to do with the Firefox User Agent Switcher add-on or Safari Develop menu.
+			Upon refresh, you should see the mobile version of this page.
+		</p>
+		<p>
+			View your cookies to see if a site preference has been saved and delete the cookie to reset it.
+		</p>
+		<h3>Device Information</h3>
 		<p>Your browser:</p>
 		<ul>
 			<li>${currentDevice.userAgent}</li>

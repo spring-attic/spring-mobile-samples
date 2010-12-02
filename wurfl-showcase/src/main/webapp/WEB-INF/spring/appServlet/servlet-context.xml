@@ -16,21 +16,17 @@
 	<interceptors>
 	
 		<!-- Detects the client's Device using WURFL -->
-		<beans:bean class="org.springframework.mobile.device.mvc.DeviceResolvingHandlerInterceptor">
+		<beans:bean class="org.springframework.mobile.device.mvc.DeviceResolverHandlerInterceptor">
 			<beans:constructor-arg>
 				<device:wurfl-device-resolver root-location="/WEB-INF/wurfl/wurfl-2.0.25.zip" patch-locations="/WEB-INF/wurfl/web_browsers_patch.xml" />
 			</beans:constructor-arg>
 		</beans:bean>
 		
-		<!-- Allows the client to indicate their site_preference, e.g. 'normal' or 'mobile', by submiting a query parameter;
-		     the preference value is saved in a cookie) -->
-		<beans:bean class="org.springframework.mobile.device.site.SitePreferenceResolvingHandlerInterceptor" />
-		
-		<!-- Redirects the client to their preferred site if necessary;
-		     this particular configuration redirects clients preferring the mobile site to 'm.localhost'
-		     NOTE: for this redirect to work m.localhost must be added to your hosts file -->
+		<!-- Redirects the client to their preferred site if necessary.
+		     This particular configuration redirects clients preferring the mobile site to 'm.testdomain'.
+		     NOTE: for this redirect to work testdomain.com and m.testdomain.com must be added to your hosts file when running the app -->
 		<beans:bean class="org.springframework.mobile.device.switcher.SiteSwitcherHandlerInterceptor" factory-method="mDot">
-			<beans:constructor-arg value="localhost" />
+			<beans:constructor-arg value="testdomain.com" />
 		</beans:bean>
 		
 	</interceptors>
