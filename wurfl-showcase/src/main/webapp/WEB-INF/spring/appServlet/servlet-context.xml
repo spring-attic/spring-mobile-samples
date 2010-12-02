@@ -27,7 +27,8 @@
 		<beans:bean class="org.springframework.mobile.device.site.SitePreferenceResolvingHandlerInterceptor" />
 		
 		<!-- Redirects the client to their preferred site if necessary;
-		     this particular configuration redirects clients preferring the mobile site to 'm.localhost' -->
+		     this particular configuration redirects clients preferring the mobile site to 'm.localhost'
+		     NOTE: for this redirect to work m.localhost must be added to your hosts file -->
 		<beans:bean class="org.springframework.mobile.device.switcher.SiteSwitcherHandlerInterceptor" factory-method="mDot">
 			<beans:constructor-arg value="localhost" />
 		</beans:bean>
