@@ -32,9 +32,9 @@
 				<wng:css_property name="margin-left" value="12px" />
 				<wng:css_property name="padding-top" value="4px" />
 			</wng:css>
-			<wng:link href="${pageContext.request.contextPath}/mobile/wng?UA=iPhone" text="Try iPhone (XHTML Advanced Grade)" />
-			<wng:link href="${pageContext.request.contextPath}/mobile/wng?UA=Blackberry" text="Try Blackberry (XHTML Simple Grade)" />
-			<wng:link href="${pageContext.request.contextPath}/mobile" text="Home" />
+			<wng:link href="${pageContext.request.contextPath}/wng?UA=iPhone" text="Try iPhone (XHTML Advanced Grade)" />
+			<wng:link href="${pageContext.request.contextPath}/wng?UA=Blackberry" text="Try Blackberry (XHTML Simple Grade)" />
+			<wng:link href="${pageContext.request.contextPath}" text="Home" />
 		</wng:navigation_bar>
 	</wng:body>
 </wng:document>

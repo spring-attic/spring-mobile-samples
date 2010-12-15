@@ -16,11 +16,7 @@
 	<interceptors>
 	
 		<!-- Detects the client's Device using WURFL -->
-		<beans:bean class="org.springframework.mobile.device.mvc.DeviceResolverHandlerInterceptor">
-			<beans:constructor-arg>
-				<device:wurfl-device-resolver root-location="/WEB-INF/wurfl/wurfl-2.0.25.zip" patch-locations="/WEB-INF/wurfl/web_browsers_patch.xml" />
-			</beans:constructor-arg>
-		</beans:bean>
+		<beans:bean class="org.springframework.mobile.device.mvc.DeviceResolverHandlerInterceptor" />
 		
 		<!-- Redirects the client to their preferred site if necessary.
 		     This particular configuration redirects clients preferring the mobile site to 'm.testdomain'.
@@ -31,17 +27,12 @@
 		
 	</interceptors>
 
-	<!-- Adds in awareness of the Wurfl WNG component model for rendering JSP views that use WNG tags -->
-	<beans:bean class="org.springframework.mobile.device.wurfl.wng.WngViewResolver">
-		<beans:constructor-arg>
-			<!-- Resolves view names to jsp templates in the /WEB-INF/views directory -->
-			<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-				<beans:property name="prefix" value="/WEB-INF/views/" />	
-				<beans:property name="suffix" value=".jsp" />
-			</beans:bean>
-		</beans:constructor-arg>
-	</beans:bean>
-	
+	<!-- Maps view names to JSP templates in /WEB-INF/views -->
+    <beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <beans:property name="prefix" value="/WEB-INF/views/" />	
+        <beans:property name="suffix" value=".jsp" />
+    </beans:bean>
+
 	<!-- Imports the application controllers that process client requests -->
 	<beans:import resource="controllers.xml" />
 

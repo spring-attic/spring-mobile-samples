@@ -13,18 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.showcases.wurfl;
+package org.springframework.showcases.lite;
 
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.config.BeanPostProcessor;
+import javax.inject.Inject;
+
 import org.springframework.mobile.device.mvc.DeviceWebArgumentResolver;
+import org.springframework.mobile.device.site.SitePreferenceWebArgumentResolver;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.support.WebArgumentResolver;
 import org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter;
 
 /**
  * A PostProcessor for Spring MVC's {@link AnnotationMethodHandlerAdapter}.
- * Performs additional configuration on the adapter instance required by the Greenhouse application.
+ * Performs additional configuration on the adapter instance required by the application.
  * Currently, this includes the registration of custom web argument resolvers.
  * 
  * TODO - see SPR-7327: it would be better to do this as part of instantiating AnnotationMethodHandlerAdapter.
@@ -33,20 +34,14 @@ import org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAda
  * @author Keith Donald
  */
 @Component
-public class WebArgumentResolverInstaller implements BeanPostProcessor {
+public class CustomWebArgumentResolverInstaller {
 
-	public Object postProcessBeforeInitialization(Object bean, String name) throws BeansException {
-		return bean;
-	}
-
-	public Object postProcessAfterInitialization(Object bean, String name) throws BeansException {
-		if (bean instanceof AnnotationMethodHandlerAdapter) {
-			AnnotationMethodHandlerAdapter controllerInvoker = (AnnotationMethodHandlerAdapter) bean;
-			WebArgumentResolver[] resolvers = new WebArgumentResolver[1];
-			resolvers[0] = new DeviceWebArgumentResolver();
-			controllerInvoker.setCustomArgumentResolvers(resolvers);
-		}
-		return bean;
+	@Inject
+	public CustomWebArgumentResolverInstaller(AnnotationMethodHandlerAdapter controllerInvoker) {
+		WebArgumentResolver[] resolvers = new WebArgumentResolver[2];
+		resolvers[0] = new DeviceWebArgumentResolver();
+		resolvers[1] = new SitePreferenceWebArgumentResolver();
+		controllerInvoker.setCustomArgumentResolvers(resolvers);		
 	}
 	
 }
