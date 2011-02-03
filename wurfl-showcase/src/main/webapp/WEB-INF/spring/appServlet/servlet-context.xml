@@ -3,20 +3,24 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:beans="http://www.springframework.org/schema/beans"
 	xmlns:device="http://www.springframework.org/schema/mobile/device"
-	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 		http://www.springframework.org/schema/mobile/device http://www.springframework.org/schema/mobile/device/spring-mobile-device-1.0.xsd">
 		 
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
 
 	<!-- Configures the Spring MVC @Controller programming model -->
-	<annotation-driven />
+	<annotation-driven>
+		<argument-resolvers>
+			<beans:bean class="org.springframework.mobile.device.site.SitePreferenceWebArgumentResolver" />
+		</argument-resolvers>	
+	</annotation-driven>
 
 	<!-- Interceptors that execute common control logic across multiple requests -->
 	<interceptors>
 	
 		<!-- Detects the client's Device using WURFL -->
-		<beans:bean class="org.springframework.mobile.device.mvc.DeviceResolverHandlerInterceptor">
+		<beans:bean class="org.springframework.mobile.device.DeviceResolverHandlerInterceptor">
 			<beans:constructor-arg>
 				<device:wurfl-device-resolver root-location="/WEB-INF/wurfl/wurfl-2.0.25.zip" patch-locations="/WEB-INF/wurfl/web_browsers_patch.xml" />
 			</beans:constructor-arg>

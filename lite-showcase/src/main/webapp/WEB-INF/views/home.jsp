@@ -13,10 +13,7 @@
 			An Apache-licensed technology showcase by SpringSource.
 		</footer>
 		<aside id="site-switcher">
-			<p>	
-				Site: <c:if test="${mobileSite}"><a href="?site_preference=normal">Normal</a> | Mobile</c:if>
-					  <c:if test="${!mobileSite}">Normal | <a href="?site_preference=mobile">Mobile</a></c:if>
-			</p>
+			Site: <c:if test="${currentSitePreference.mobile}"><a href="?site_preference=normal">Normal</a> | Mobile</c:if><c:if test="${!currentSitePreference.mobile}">Normal | <a href="?site_preference=mobile">Mobile</a></c:if>
 		</aside>
 	</body>
 </html>

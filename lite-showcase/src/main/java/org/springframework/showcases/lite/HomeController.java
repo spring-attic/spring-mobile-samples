@@ -35,7 +35,6 @@ public class HomeController {
 	@RequestMapping("/")
 	public String home(SitePreference sitePreference, Model model) {
 		if (sitePreference == SitePreference.MOBILE) {
-			model.addAttribute("mobileSite", true);
 			return "home-mobile";
 		} else {
 			return "home";
