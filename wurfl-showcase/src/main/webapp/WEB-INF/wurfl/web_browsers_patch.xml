@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <wurfl_patch>
 	<version>
-		<last_updated>September 11, 2010</last_updated>
+		<last_updated>January 4, 2011</last_updated>
 	</version>
 	<devices>
 		<!-- Web browsers -->
-		<device user_agent="Mozilla/4.0" fall_back="generic" id="generic_web_browser">
+		<device user_agent="DO_NOT_MATCH_GENERIC_WEB_BROWSER" fall_back="generic" id="generic_web_browser">
 			<group id="product_info">
 				<capability name="brand_name" value="generic web browser"/>
 				<capability name="model_name" value=""/>

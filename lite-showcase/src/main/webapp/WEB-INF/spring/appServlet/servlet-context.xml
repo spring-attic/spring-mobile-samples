@@ -11,9 +11,6 @@
 
 	<!-- Configures the Spring MVC @Controller programming model -->
 	<annotation-driven>
-		<message-converters> <!-- Remove once minOccurs=0 is added to XSD -->
-			<beans:bean class="org.springframework.http.converter.StringHttpMessageConverter"/>
-		</message-converters>
 		<argument-resolvers>
 			<beans:bean class="org.springframework.mobile.device.site.SitePreferenceWebArgumentResolver" />
 		</argument-resolvers>			
