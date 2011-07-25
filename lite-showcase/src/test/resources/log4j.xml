@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="org.springframework.showcases.wurfl">
+	<logger name="org.springframework.showcases.lite">
 		<level value="debug" />
 	</logger>
 	
