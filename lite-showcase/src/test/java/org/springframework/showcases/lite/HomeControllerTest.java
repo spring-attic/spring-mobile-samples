@@ -8,9 +8,9 @@ import org.springframework.ui.ExtendedModelMap;
 import org.springframework.ui.Model;
 
 public class HomeControllerTest {
-	
+
 	private HomeController controller = new HomeController();
-	
+
 	@Test
 	public void homePageMobileSitePreference() {
 		Model model = new ExtendedModelMap();
