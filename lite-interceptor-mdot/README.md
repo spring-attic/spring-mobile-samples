@@ -4,9 +4,9 @@
 
 This sample app demonstrates many of the capabilities of the Spring Mobile Device module, including:
 
-* "Lite" device resolution
+* "Lite" device resolution through the use of DeviceResolverHandlerInterceptor
 * Site preference management
-* Site switching
+* Site switching configured for the mDot strategy
 
 ## Build and Run the Sample Application
 
@@ -22,7 +22,7 @@ This sample app demonstrates many of the capabilities of the Spring Mobile Devic
 
 3. Access the project at the following URL:
 
-		http://localhost:8080/lite-showcase
+		http://localhost:8080/lite-interceptor-mdot
 
 	_Note: Accessing this URL from your browser versus an Android emulator or iOS simulator will demonstrate the functionality_
 

@@ -16,10 +16,8 @@
         <servlet-name>appServlet</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
-
-    <!-- Disable the DeviceResolverHandlerInterceptor in servlet-context.xml to use this filter -->
+    
     <!-- Detects the client's Device -->
-    <!--
     <filter>
         <filter-name>deviceResolverHandlerFilter</filter-name>
         <filter-class>org.springframework.mobile.device.DeviceResolverHandlerFilter</filter-class>
@@ -28,7 +26,6 @@
     <filter-mapping>
         <filter-name>deviceResolverHandlerFilter</filter-name>
         <servlet-name>appServlet</servlet-name>
-    </filter-mapping> 
-    -->
-
+    </filter-mapping>
+    
 </web-app>

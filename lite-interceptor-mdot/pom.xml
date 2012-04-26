@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<groupId>org.springframework.mobile</groupId>
-	<artifactId>lite-showcase</artifactId>
+	<artifactId>lite-interceptor-mdot</artifactId>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>lite-showcase</name>
+	<name>lite-interceptor-mdot</name>
 	<url>http://www.springsource.org</url>
 	<description>Demonstration of Spring Mobile's lightweight server-side device detection and site switching functionality</description>
 	<organization>
@@ -18,7 +18,7 @@
 	<properties>
 		<java-version>1.6</java-version>
 		<org.springframework-version>3.1.1.RELEASE</org.springframework-version>
-		<org.springframework.mobile-version>1.0.0.BUILD-SNAPSHOT</org.springframework.mobile-version>
+		<org.springframework.mobile-version>1.0.0.RC2</org.springframework.mobile-version>
 		<org.aspectj-version>1.6.9</org.aspectj-version>
 		<org.slf4j-version>1.6.1</org.slf4j-version>
 		<log4j-version>1.2.16</log4j-version>
@@ -189,9 +189,9 @@
 	<repositories>
 		<!-- For testing against latest Spring snapshots -->
 		<repository>
-			<id>org.springframework.maven.snapshot</id>
-			<name>Spring Maven Snapshot Repository</name>
-			<url>http://repo.springframework.org/snapshot</url>
+			<id>spring-snapshot</id>
+			<name>SpringSource Snapshot Repository</name>
+			<url>http://repo.springsource.org/snapshot</url>
 			<releases>
 				<enabled>false</enabled>
 			</releases>
@@ -201,14 +201,13 @@
 		</repository>
 		<!-- For developing against latest Spring milestones -->
 		<repository>
-			<id>org.springframework.maven.milestone</id>
-			<name>Spring Maven Milestone Repository</name>
-			<url>http://repo.springframework.org/milestone</url>
+			<id>spring-milestone</id>
+			<name>SpringSource Milestone Repository</name>
+			<url>http://repo.springsource.org/milestone</url>
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
-
 	</repositories>
 
 </project>

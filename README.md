@@ -6,9 +6,13 @@ This repository contains sample projects illustrating usage of the [Spring Mobil
 
 ## Sample Apps
 
-See the README in each directory for more information on the sample project and additional instructions.
+The following "lite" sample apps demonstrate the capabilities of the Spring Mobile LiteDeviceResolver for server-side device detection. See the README in each directory for more information on the sample project and additional instructions. 
 
-* lite-showcase - demonstrating the capabilities of the Spring Mobile "Lite" DeviceResolver for server-side device detection.
+* lite-filter-mdot - configured with the DeviceResolverHandlerFilter, a Servlet Filter, for device resolution, and the mDot site switching strategy.
+
+* lite-interceptor-mdot - configured with the DeviceResolverHandlerInterceptor for device resolution, and the mDot site switching strategy.
+
+* lite-interceptor-urlpath - configured with the DeviceResolverHandlerInterceptor for device resolution, and the urlPath site switching strategy.
 
 ## Additional Resources
 
