@@ -19,12 +19,12 @@
     
     <!-- Detects the client's Device -->
     <filter>
-        <filter-name>deviceResolverHandlerFilter</filter-name>
-        <filter-class>org.springframework.mobile.device.DeviceResolverHandlerFilter</filter-class>
+        <filter-name>deviceResolverRequestFilter</filter-name>
+        <filter-class>org.springframework.mobile.device.DeviceResolverRequestFilter</filter-class>
     </filter>
 
     <filter-mapping>
-        <filter-name>deviceResolverHandlerFilter</filter-name>
+        <filter-name>deviceResolverRequestFilter</filter-name>
         <servlet-name>appServlet</servlet-name>
     </filter-mapping>
     
