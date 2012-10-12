@@ -1,0 +1,12 @@
+{
+  "name": "Application",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "*",
+    "optimist": "*",
+    "portscanner": "*"
+  },
+  "scripts": {
+    "start": "node server.js --watch"
+  }
+}

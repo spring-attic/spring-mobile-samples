@@ -1,0 +1,3 @@
+var Bridge = exports.Bridge = {
+
+};

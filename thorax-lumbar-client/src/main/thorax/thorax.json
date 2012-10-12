@@ -1,0 +1,14 @@
+{
+  "modifyLumbarJSON": true,
+  "paths": {
+    "lib": "js/lib",
+    "views": "js/views",
+    "collections": "js/collections",
+    "models": "js/models",
+    "routers": "js/routers",
+    "styles": "styles",
+    "templates": "templates",
+    "generators": "generators"
+  },
+  "language": "javascript"
+}

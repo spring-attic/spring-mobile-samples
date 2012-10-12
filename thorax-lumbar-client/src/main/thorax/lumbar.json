@@ -1,0 +1,81 @@
+{
+  "application": {
+    "name": "Application",
+    "module": "base"
+  },
+  "platforms": [ "mobile", "tablet", "web" ],
+  "packages": {
+    "web": {
+      "platforms": [ "web" ],
+      "combine": false
+    },
+    "native-hello-world": {
+      "platforms": [ "mobile", "tablet" ],
+      "modules": [ "base", "hello_world" ],
+      "combine": true
+    }
+  },
+  "modules": {
+    "base": {
+      "scripts": [
+        {"src": "js/lib/zepto.js", "global": true},
+        {"src": "js/lib/underscore.js", "global": true},
+        {"src": "js/lib/backbone.js", "global": true},
+        {"src": "js/lib/handlebars.js", "global": true},
+        {"src": "js/lib/thorax.js", "global": true},
+        {"src": "js/lib/script.js", "global": true},
+        {"src": "js/lib/lumbar-loader.js", "platform": "web"},
+        {"src": "js/lib/lumbar-loader-events.js", "platform": "web"},
+        {"src": "js/lib/lumbar-loader-standard.js", "platform": "web"},
+        {"src": "js/lib/lumbar-loader-backbone.js", "platform": "web"},
+        "js/init.js",
+        "js/router.js",
+        "js/model.js",
+        "js/collection.js",
+        "js/view.js",
+        {"src": "js/bridge.js", "platforms": ["mobile", "tablet"]},
+        {"src": "js/bridge-mobile.js", "platform": "mobile"},
+        {"src": "js/bridge-tablet.js", "platforms": ["tablet"]},
+        {"module-map": true, "platforms": ["web"]}
+      ],
+      "styles": [
+        "styles/base.styl",
+        {"src": "styles/mobile.styl", "platform": "mobile"},
+        {"src": "styles/tablet.styl", "platform": "tablet"},
+        {"src": "styles/web.styl", "platform": "web"}
+      ],
+      "static": [
+        {"src": "static/#{platform}/index.html", "dest": "index.html"}
+      ]
+    },
+    "hello_world": {
+      "routes": {
+        "": "index",
+        "hello": "index"
+      },
+      "scripts": [
+        "js/views/hello_world",
+        "js/routers/hello_world.js"
+      ],
+      "styles": [
+        "styles/hello_world.styl"
+      ]
+    }
+  },
+  "templates": {
+    "js/views/hello_world/index.js": [
+      "templates/hello_world/index.handlebars"
+    ]
+  },
+  "styles": {
+    "pixelDensity": {
+      "mobile": [ 1, 2 ],
+      "tablet" : [ 1, 2 ],
+      "web": [ 1, 2 ]
+    },
+    "includes": [
+      "nib",
+      "styles/include/global.styl"
+    ]
+  }
+}

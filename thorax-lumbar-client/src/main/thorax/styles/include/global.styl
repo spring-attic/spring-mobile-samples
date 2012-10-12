@@ -1,0 +1,10 @@
+// State setup
+$native = not $web
+
+if $native
+  vendor-prefixes = webkit
+
+if $android
+  $defaultFontFamily = "Droid Sans",Helvetica,Verdana
+else
+  $defaultFontFamily = "Helvetica Neue",Helvetica,Verdana
