@@ -32,7 +32,7 @@
 		<javax.servlet.jsp-version>2.1</javax.servlet.jsp-version>
 		<javax.servlet.jstl-version>1.2</javax.servlet.jstl-version>
 		<junit-version>4.9</junit-version>
-		<org.apache.maven.plugins.compiler-version>2.3.2</org.apache.maven.plugins.compiler-version>
+		<org.apache.maven.plugins.compiler-version>2.5.1</org.apache.maven.plugins.compiler-version>
 		<org.codehaus.mojo.aspectj-version>1.4</org.codehaus.mojo.aspectj-version>
 		<org.codehaus.mojo.tomcat-version>1.1</org.codehaus.mojo.tomcat-version>
 	</properties>
