@@ -3,9 +3,14 @@ apply plugin: 'war'
 apply plugin: 'eclipse-wtp'
 apply plugin: 'tomcat'
 
-springVersion = '3.1.2.RELEASE'
-springMobileVersion = '1.0.0.RELEASE'
+aspectJVersion = '1.6.9'
+hibernateValidatorVersion = '4.2.0.Final'
+jacksonVersion = '1.9.9'
 mockitoVersion = '1.8.5'
+neo4jVersion = '1.6.3'
+springDataNeo4jVersion = '2.0.1.RELEASE'
+springMobileVersion = '1.0.0.RELEASE'
+springVersion = '3.1.2.RELEASE'
 tomcatVersion = '7.0.11'
 
 configurations {
@@ -19,26 +24,33 @@ dependencies {
 	compile ("org.springframework:spring-context:$springVersion") {
 		exclude module: 'commons-logging'
 	}
+    compile "org.springframework:spring-aspects:$springVersion"
+    compile "org.springframework:spring-beans:$springVersion"
+    compile "org.springframework:spring-core:$springVersion"
 	compile "org.springframework:spring-webmvc:$springVersion"
 	compile "org.springframework:spring-tx:$springVersion"
-	compile "org.springframework:spring-jdbc:$springVersion"
 	compile "org.springframework.mobile:spring-mobile-device:$springMobileVersion"
-	compile "cglib:cglib-nodep:2.2"
+	compile ("org.springframework.data:spring-data-neo4j:$springDataNeo4jVersion") {
+	   exclude group: 'org.springframework'
+	}
+	compile "org.neo4j:neo4j:$neo4jVersion"
+    compile "org.neo4j:neo4j-cypher:$neo4jVersion"
+    compile "org.codehaus.jackson:jackson-mapper-asl:$jacksonVersion"
+    compile "org.hibernate:hibernate-validator:$hibernateValidatorVersion"
+    compile "org.aspectj:aspectjrt:$aspectJVersion"
+    compile "cglib:cglib-nodep:2.2"
 	compile "org.slf4j:slf4j-api:1.5.10"
 	compile "org.slf4j:jcl-over-slf4j:1.5.10"
 	compile "org.slf4j:slf4j-log4j12:1.5.10"
 	compile "javax.inject:javax.inject:1"
-	compile "com.h2database:h2:1.3.156"
-	providedCompile ("javax.servlet:javax.servlet-api:3.0.1") { provided = true }
-	providedCompile ("javax.servlet.jsp:jsp-api:2.1") { provided = true }
 	compile "javax.servlet:jstl:1.2"
+    providedCompile ("javax.servlet:javax.servlet-api:3.0.1") { provided = true }
+    providedCompile ("javax.servlet.jsp:jsp-api:2.1") { provided = true }
 	testCompile "org.springframework:spring-test-mvc:1.0.0.BUILD-SNAPSHOT"
 	testCompile "junit:junit:4.8.1"
-	testCompile "org.mockito:mockito-all:$mockitoVersion"
-
-  tomcat "org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}",
+    tomcat "org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}",
          "org.apache.tomcat.embed:tomcat-embed-logging-juli:${tomcatVersion}"
-  tomcat("org.apache.tomcat.embed:tomcat-embed-jasper:${tomcatVersion}") {
+    tomcat("org.apache.tomcat.embed:tomcat-embed-jasper:${tomcatVersion}") {
       exclude group: 'org.eclipse.jdt.core.compiler', module: 'ecj'
   }
 

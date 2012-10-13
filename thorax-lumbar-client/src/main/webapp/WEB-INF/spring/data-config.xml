@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:neo4j="http://www.springframework.org/schema/data/neo4j"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/data/neo4j http://www.springframework.org/schema/data/neo4j/spring-neo4j-2.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd">
+
+
+    <neo4j:config storeDirectory="/tmp/s2gx" /> <!-- TODO: Make this more configurable -->
+
+    <neo4j:repositories base-package="com.springsource.s2gx" />
+
+    <bean class="com.springsource.s2gx.DefaultSessionLoader" 
+          c:_="classpath:/sessiondata.txt" 
+          c:_-ref="neo4jTemplate" />
+
+    <bean id="neo4jTransactionManager" class="org.springframework.transaction.jta.JtaTransactionManager">
+        <property name="transactionManager">
+            <bean class="org.neo4j.kernel.impl.transaction.SpringTransactionManager">
+                <constructor-arg ref="graphDatabaseService"/>
+            </bean>
+        </property>
+        <property name="userTransaction">
+            <bean class="org.neo4j.kernel.impl.transaction.UserTransactionImpl">
+                <constructor-arg ref="graphDatabaseService"/>
+            </bean>
+        </property>
+    </bean>
+
+    <tx:annotation-driven transaction-manager="neo4jTransactionManager"/>
+
+</beans>
