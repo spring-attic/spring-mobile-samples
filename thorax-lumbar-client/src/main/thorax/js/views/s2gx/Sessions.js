@@ -7,3 +7,4 @@ cache.sessions.fetch();
 S2GX.View.extend({
   name: 's2gx/Sessions'
 });
+ 

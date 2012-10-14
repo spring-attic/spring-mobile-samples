@@ -69,18 +69,23 @@ task wrapper(type: Wrapper) {
 }
 
 task lumbar(type: Exec) {
-  lumbarCommandLine = ["lumbar", "build", "src/main/thorax/lumbar.json", "build/thorax"]
+  lumbarCommandLine = ["lumbar", "build", "src/main/thorax/lumbar.json", "src/main/webapp/thorax"]
+  commandLine lumbarCommandLine
+}
+
+task lumbarWatch(type: Exec) {
+  lumbarCommandLine = ["lumbar", "watch", "src/main/thorax/lumbar.json", "src/main/webapp/thorax"]
   commandLine lumbarCommandLine
 }
 
 war.dependsOn { lumbar }
 
-war {
-    from('build/thorax') {
-        include '**' into 'resources'
-    }
+tomcatRun.dependsOn { lumbar }
+tomcatRun {
+    contextPath = 'thorax-client'
 }
 
+tomcatRunWar.dependsOn { lumbar }
 tomcatRunWar {
     contextPath = 'thorax-client'
 }
