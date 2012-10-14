@@ -41,4 +41,14 @@
         <servlet-name>appServlet</servlet-name>
     </filter-mapping>
 
+    <filter>
+        <filter-name>optionsHeadersFilter</filter-name>
+        <filter-class>com.springsource.s2gx.OptionsHeadersFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>optionsHeadersFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
 </web-app>
