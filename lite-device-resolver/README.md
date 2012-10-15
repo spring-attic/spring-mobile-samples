@@ -1,12 +1,8 @@
-# Spring Mobile Lite Showcase
+# Spring Mobile Lite Device Resolver
 
 ## Overview
 
-This sample app demonstrates many of the capabilities of the Spring Mobile Device module, including:
-
-* "Lite" device resolution through the use of DeviceResolverHandlerInterceptor
-* Site preference management
-* Site switching configured for the mDot strategy
+This sample app demonstrates the Device Resolver capabilities of the Spring Mobile Device module, including:
 
 ## Build and Run the Sample Application
 
@@ -22,13 +18,6 @@ This sample app demonstrates many of the capabilities of the Spring Mobile Devic
 
 3. Access the project at the following URL:
 
-		http://localhost:8080/lite-interceptor-mdot
+		http://localhost:8080/lite-device-resolver
 
 	_Note: Accessing this URL from your browser versus an Android emulator or iOS simulator will demonstrate the functionality_
-
-## Configure your Hosts file
-
-In order for the site switcher demonstration to work in a local test environment, you will need to add the following to your hosts file; for example, /etc/hosts on Unix and OS X systems:
-
-	127.0.0.1    testdomain.com 
-	127.0.0.1    m.testdomain.com
