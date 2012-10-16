@@ -1,4 +1,8 @@
-<h2>Sessions</h2>
-{{#each sessions}}
-<li>{{title}}</li>
+<header><h2>SpringOne/2GX</h2></header>
+<article>
+<ul class="listview">
+{{#each model.models}}
+<li>{{attributes.title}}</li>
 {{/each}}
+</ul>
+</article>
