@@ -5,7 +5,8 @@ S2GX.View.extend({
   },
   
   sessionClicked : function(e) {
-	  sessionid = e.currentTarget.attributes[0].value;
+	  sessionId = e.currentTarget.attributes[0].value;
+	  S2GX.Routers.s2gx.navigate('/session/' + sessionId, { trigger: true }) 
   }
 
 });

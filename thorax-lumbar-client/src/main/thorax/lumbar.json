@@ -124,11 +124,13 @@
     "s2gx": {
       "routes": {
         "": "sessions",
-        "sessions": "sessions"
+        "sessions": "sessions",
+        "session/:sessionId": "sessionDetail"
       },
       "scripts": [
         "js/models/Session.js",
         "js/collections/Sessions.js",
+        "js/views/s2gx/Session.js",
         "js/views/s2gx/Sessions.js",
         "js/routers/s2gx.js"
       ]
@@ -136,6 +138,7 @@
   },
   "templates": {
     "js/views/s2gx/Sessions.js": [
+      "templates/s2gx/Session.handlebars",
       "templates/s2gx/Sessions.handlebars",
       "templates/s2gx/Sessions-item.handlebars"
     ]
