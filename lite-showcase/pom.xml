@@ -2,15 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
+	
 	<parent>
 		<groupId>org.springframework.mobile</groupId>
 		<artifactId>spring-mobile-samples</artifactId>
 		<version>1.0.1-BUILD-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>lite-site-preference-handler</artifactId>
+	<artifactId>lite-showcase</artifactId>
 	<packaging>war</packaging>
-	<name>lite-site-preference-handler</name>
+	<name>lite-showcase</name>
 
 </project>

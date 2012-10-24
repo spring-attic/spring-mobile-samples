@@ -1,4 +1,4 @@
-# Spring Mobile Lite Showcase
+# Spring Mobile Lite Site Preference Handler
 
 ## Overview
 

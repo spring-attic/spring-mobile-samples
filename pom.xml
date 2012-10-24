@@ -2,10 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	
+
 	<groupId>org.springframework.mobile</groupId>
 	<artifactId>spring-mobile-samples</artifactId>
-	<version>1.0.0-BUILD-SNAPSHOT</version>
+	<version>1.0.1-BUILD-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>spring-mobile-samples</name>
 	<url>http://www.springsource.org</url>
@@ -14,13 +14,13 @@
 		<name>SpringSource</name>
 		<url>http://www.springsource.org</url>
 	</organization>
-	
+
 	<modules>
-		<module>/lite-filter-mdot</module>
-		<module>/lite-interceptor-mdot</module>
-		<module>/lite-interceptor-urlpath</module>
+		<module>/lite-device-resolver</module>
+		<module>/lite-site-preference-handler</module>
+		<module>/lite-showcase</module>
 	</modules>
-	
+
 	<properties>
 		<java-version>1.6</java-version>
 		<org.springframework-version>3.1.1.RELEASE</org.springframework-version>
@@ -36,7 +36,7 @@
 		<org.codehaus.mojo.aspectj-version>1.4</org.codehaus.mojo.aspectj-version>
 		<org.codehaus.mojo.tomcat-version>1.1</org.codehaus.mojo.tomcat-version>
 	</properties>
-	
+
 	<dependencies>
 		<!-- Spring -->
 		<dependency>
@@ -61,7 +61,7 @@
 			<artifactId>spring-mobile-device</artifactId>
 			<version>${org.springframework.mobile-version}</version>
 		</dependency>
-		
+
 		<!-- CGLIB, only required and used for @Configuration usage -->
 		<dependency>
 			<groupId>cglib</groupId>

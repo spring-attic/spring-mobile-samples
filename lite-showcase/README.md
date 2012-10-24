@@ -1,8 +1,12 @@
-# Spring Mobile Lite Device Resolver
+# Spring Mobile Lite Showcase
 
 ## Overview
 
-This sample app demonstrates the Device Resolver capabilities of the Spring Mobile Device module.
+This sample app demonstrates many of the capabilities of the Spring Mobile Device module, including:
+
+* "Lite" device resolution through the use of DeviceResolverHandlerInterceptor 
+* Site preference management
+* Site switching configured for the URL Path strategy
 
 ## Build and Run the Sample Application
 
@@ -18,6 +22,6 @@ This sample app demonstrates the Device Resolver capabilities of the Spring Mobi
 
 3. Access the project at the following URL:
 
-		http://localhost:8080/lite-device-resolver
+		http://localhost:8080/lite-showcase
 
 	_Note: Accessing this URL from your browser versus an Android emulator or iOS simulator will demonstrate the functionality_

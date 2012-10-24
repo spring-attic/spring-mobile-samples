@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.mobile</groupId>
 		<artifactId>spring-mobile-samples</artifactId>
-		<version>1.0.0-BUILD-SNAPSHOT</version>
+		<version>1.0.1-BUILD-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>lite-device-resolver</artifactId>
