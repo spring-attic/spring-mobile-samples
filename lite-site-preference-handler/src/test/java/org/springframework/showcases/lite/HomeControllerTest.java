@@ -12,6 +12,12 @@ public class HomeControllerTest {
 	private HomeController controller = new HomeController();
 
 	@Test
+	public void homePageDefaultDevice() {
+		Model model = new ExtendedModelMap();
+		assertEquals("home", controller.home(null, model));
+	}
+
+	@Test
 	public void homePageNormalDevice() {
 		Model model = new ExtendedModelMap();
 		assertEquals("home", controller.home(SitePreference.NORMAL, model));

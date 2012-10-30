@@ -22,7 +22,7 @@ import org.springframework.context.annotation.Configuration;
  * @author Roy Clarkson
  */
 @Configuration
-@ComponentScan(basePackages="org.springframework.showcases.lite")
+@ComponentScan(basePackages = "org.springframework.showcases.lite")
 public class ComponentConfig {
 
 }

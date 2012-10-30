@@ -33,14 +33,17 @@ public class HomeController {
 
 	@RequestMapping("/")
 	public String home(SitePreference sitePreference, Model model) {
-		if (sitePreference == SitePreference.MOBILE) {
+		if (sitePreference == SitePreference.NORMAL) {
+			logger.info("Site preference is normal");
+			return "home";
+		} else if (sitePreference == SitePreference.MOBILE) {
 			logger.info("Site preference is mobile");
 			return "home-mobile";
 		} else if (sitePreference == SitePreference.TABLET) {
 			logger.info("Site preference is tablet");
 			return "home-tablet";
 		} else {
-			logger.info("Site preference is normal, or no site preference selected");
+			logger.info("no site preference");
 			return "home";
 		}
 	}

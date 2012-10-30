@@ -19,6 +19,9 @@ import java.util.List;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.mobile.device.DeviceHandlerMethodArgumentResolver;
+import org.springframework.mobile.device.DeviceResolverHandlerInterceptor;
+import org.springframework.mobile.device.DeviceWebArgumentResolver;
 import org.springframework.mobile.device.site.SitePreferenceHandlerInterceptor;
 import org.springframework.mobile.device.site.SitePreferenceHandlerMethodArgumentResolver;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
@@ -40,10 +43,25 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 	// implementing WebMvcConfigurer
 
 	public void addInterceptors(InterceptorRegistry registry) {
+
+		/* 
+		 * Include the handler for device resolution. Strictly speaking, a device resolver is not required for site
+		 * preference management. However for this sample application, it's useful to see what device is being resolved.
+		 */
+		//registry.addInterceptor(new DeviceResolverHandlerInterceptor());
+
+		/*
+		 * Include the handler for site preference management. This handler defaults to using cookie based storage.
+		 */
 		registry.addInterceptor(new SitePreferenceHandlerInterceptor());
 	}
 
 	public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
+
+		// argument resolver that supports accessing the current device from the web request 
+		//argumentResolvers.add(new DeviceHandlerMethodArgumentResolver());
+
+		// argument resolver that supports accessing the current site preference from the web request
 		argumentResolvers.add(new SitePreferenceHandlerMethodArgumentResolver());
 	}
 

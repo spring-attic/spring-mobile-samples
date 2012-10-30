@@ -1,24 +1,14 @@
 <%@ page session="false" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Spring Mobile | Lite Showcase</title>
+		<title>Spring Mobile | Lite Site Preference Handler</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	</head>
 	<body>
-		<header>
-			<h1>Tablet Site</h1>
-		</header>
-		<footer>
-			An Apache-licensed technology showcase by SpringSource.
-		</footer>
-		<aside id="site-preference">
-			<p>Site:
-			<c:if test="${currentSitePreference.mobile}"><a href="?site_preference=normal">Normal</a> | Mobile | <a href="?site_preference=tablet">Tablet</a></c:if>
-			<c:if test="${currentSitePreference.tablet}"><a href="?site_preference=normal">Normal</a> | <a href="?site_preference=mobile">Mobile</a> | Tablet</c:if>
-			<c:if test="${currentSitePreference.normal}">Normal | <a href="?site_preference=mobile">Mobile</a> | <a href="?site_preference=tablet">Tablet</a></c:if>
-			</p>
-		</aside>
+		<%@include file="includes/header.jsp" %>
+		<%@include file="includes/content.jsp" %>
+		<%@include file="includes/footer.jsp" %>
+		<%@include file="includes/menu.jsp" %>
 	</body>
 </html>

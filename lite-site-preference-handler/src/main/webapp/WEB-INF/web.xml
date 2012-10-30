@@ -10,7 +10,7 @@
 		<param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
 	</context-param>
 
-	<!-- Location of Java @Configuration classes that configure the components
+	<!-- Location of Java @Configuration classes that configure the components 
 		that makeup this application -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
