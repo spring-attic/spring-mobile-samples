@@ -23,27 +23,26 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * Handles requests for the showcase application.
+ * Handles requests for the sample application.
  * @author Roy Clarkson
  */
 @Controller
 public class HomeController {
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
+
 	@RequestMapping("/")
-    public String home(Device device, Model model) {
-        if (device.isMobile()) {
-            logger.info("Hello mobile user!");
-            model.addAttribute("deviceType", "mobile");
-        } else if (device.isTablet()) {
-            logger.info("Hello tablet user!");
-            model.addAttribute("deviceType", "tablet");
-        } else {
-        	logger.info("Hello desktop user!");
-        	model.addAttribute("deviceType", "normal");
-        }
-        return "home";
-    }
+	public String home(Device device, Model model) {
+		if (device == null) {
+			logger.info("no device detected");
+		} else if (device.isNormal()) {
+			logger.info("Device is normal");
+		} else if (device.isMobile()) {
+			logger.info("Device is mobile");
+		} else if (device.isTablet()) {
+			logger.info("Device is tablet");
+		}
+		return "home";
+	}
 
 }

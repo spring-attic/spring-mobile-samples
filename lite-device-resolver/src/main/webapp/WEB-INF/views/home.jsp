@@ -3,16 +3,19 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Spring Mobile | Lite Showcase</title>
+		<title>Spring Mobile | Lite Device Resolver</title>
 	</head>
 	<body>
 		<header>
 			<h1>Device Resolver Example</h1>
 		</header>
-		<p>
-			<c:if test="${currentDevice.mobile}">Hello mobile user!</c:if>
-			<c:if test="${currentDevice.tablet}">Hello tablet user!</c:if>
-			<c:if test="${currentDevice.normal}">Hello desktop user!</c:if>
+		<p>Device: 
+			<c:choose>
+				<c:when test="${currentDevice.normal}">Normal</c:when>
+				<c:when test="${currentDevice.mobile}">Mobile</c:when>
+				<c:when test="${currentDevice.tablet}">Tablet</c:when>
+				<c:otherwise>Default</c:otherwise>
+			</c:choose>
 		</p>
 		<footer>
 			An Apache-licensed technology showcase by SpringSource.
