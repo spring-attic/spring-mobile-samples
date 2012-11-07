@@ -42,7 +42,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(new DeviceResolverHandlerInterceptor());
-//		registry.addInterceptor(SiteSwitcherHandlerInterceptor.mDot("testdomain.com"));
+		//registry.addInterceptor(SiteSwitcherHandlerInterceptor.mDot("testdomain.com"));
 		registry.addInterceptor(SiteSwitcherHandlerInterceptor.urlPath("/mobile", "/tablet", "/lite-showcase"));
 	}
 
@@ -53,9 +53,9 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
 	}
-	
+
 	// additional webmvc-related beans
-	
+
 	@Bean
 	public InternalResourceViewResolver internalResourceViewResolver() {
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
