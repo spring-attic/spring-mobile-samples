@@ -5,7 +5,7 @@
 
 	<groupId>org.springframework.mobile</groupId>
 	<artifactId>spring-mobile-samples</artifactId>
-	<version>1.0.1-BUILD-SNAPSHOT</version>
+	<version>1.1.0-BUILD-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>spring-mobile-samples</name>
 	<url>http://www.springsource.org</url>
@@ -25,7 +25,7 @@
 	<properties>
 		<java-version>1.6</java-version>
 		<org.springframework-version>3.1.3.RELEASE</org.springframework-version>
-		<org.springframework.mobile-version>1.1.0.BUILD-SNAPSHOT</org.springframework.mobile-version>
+		<org.springframework.mobile-version>1.1.0.M1</org.springframework.mobile-version>
 		<org.aspectj-version>1.6.9</org.aspectj-version>
 		<org.slf4j-version>1.6.1</org.slf4j-version>
 		<log4j-version>1.2.16</log4j-version>
@@ -138,9 +138,9 @@
 
 	<repositories>
 		<repository>
-			<id>spring-snapshot</id>
-			<name>SpringSource Snapshot Repository</name>
-			<url>http://repo.springsource.org/libs-snapshot</url>
+			<id>spring-milestone</id>
+			<name>SpringSource Milestone Repository</name>
+			<url>http://repo.springsource.org/libs-milestone</url>
 		</repository>
 	</repositories>
 
