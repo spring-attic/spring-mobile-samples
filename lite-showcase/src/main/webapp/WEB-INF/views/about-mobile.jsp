@@ -10,9 +10,7 @@
 		<header>
 			<h1>About (Mobile Site)</h1>
 		</header>
-		<content>
-			<p>Return to the <a href="<c:url value="/" />">Home</a> page.</p>
-		</content>
+		<p>Return to the <a href="<c:url value="/" />">Home</a> page.</p>
 		<footer>
 			An Apache-licensed technology showcase by SpringSource.
 		</footer>
