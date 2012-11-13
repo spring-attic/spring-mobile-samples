@@ -12,7 +12,11 @@ The following "lite" sample apps demonstrate the capabilities of the Spring Mobi
 
 * lite-site-preference-handler - illustrates SitePreferenceHandler functionality.
 
-* lite-interceptor-urlpath - combines all features of Spring Mobile to showcase the use of the "urlPath" site switching.
+* lite-site-switcher-handler - illustrates SiteSwitcherHandler functionality.
+
+* lite-showcase - combines all features of Spring Mobile to showcase the use of the "urlPath" site switching.
+
+* thorax-lumbar-client - showcases the use of Spring Mobile with JavaScript libraries
 
 ## Contributor Guidelines
 
