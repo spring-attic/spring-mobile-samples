@@ -10,6 +10,7 @@
 	<name>spring-mobile-samples</name>
 	<url>http://www.springsource.org</url>
 	<description>Demonstration of Spring Mobile's lightweight server-side device detection and site switching functionality</description>
+	<inceptionYear>2010</inceptionYear>
 	<organization>
 		<name>SpringSource</name>
 		<url>http://www.springsource.org</url>
@@ -19,13 +20,14 @@
 		<module>/lite-device-resolver</module>
 		<module>/lite-site-preference-handler</module>
 		<module>/lite-site-switcher-handler</module>
+		<module>/lite-device-delegating-view-resolver</module>
 		<module>/lite-showcase</module>
 	</modules>
 
 	<properties>
 		<java-version>1.6</java-version>
-		<org.springframework-version>3.1.3.RELEASE</org.springframework-version>
-		<org.springframework.mobile-version>1.1.0.M1</org.springframework.mobile-version>
+		<org.springframework-version>3.2.0.RELEASE</org.springframework-version>
+		<org.springframework.mobile-version>1.1.0.BUILD-SNAPSHOT</org.springframework.mobile-version>
 		<org.aspectj-version>1.6.9</org.aspectj-version>
 		<org.slf4j-version>1.6.1</org.slf4j-version>
 		<log4j-version>1.2.16</log4j-version>
@@ -33,7 +35,7 @@
 		<javax.servlet.jsp-version>2.1</javax.servlet.jsp-version>
 		<javax.servlet.jstl-version>1.2</javax.servlet.jstl-version>
 		<junit-version>4.9</junit-version>
-		<org.apache.maven.plugins.compiler-version>2.5.1</org.apache.maven.plugins.compiler-version>
+		<org.apache.maven.plugins.compiler-version>3.0</org.apache.maven.plugins.compiler-version>
 		<org.codehaus.mojo.aspectj-version>1.4</org.codehaus.mojo.aspectj-version>
 		<org.codehaus.mojo.tomcat-version>1.1</org.codehaus.mojo.tomcat-version>
 	</properties>
