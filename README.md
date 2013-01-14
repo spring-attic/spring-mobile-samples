@@ -25,3 +25,6 @@ Please follow the [contributor guidelines](https://github.com/SpringSource/sprin
 ## Additional Resources
 
 * [Screencast demonstration based on Spring Mobile 1.0.0.M2](http://s3.springsource.org/MVC/spring-mobile-1.0.0.M2-screencast.mov)
+
+## License
+Spring Mobile is released under version 2.0 of the [Apache License](http://www.apache.org/licenses/LICENSE-2.0).
