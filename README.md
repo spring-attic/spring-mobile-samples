@@ -8,15 +8,17 @@ This repository contains sample projects illustrating usage of the [Spring Mobil
 
 The following "lite" sample apps demonstrate the capabilities of the Spring Mobile LiteDeviceResolver for server-side device detection. See the README in each directory for more information on the sample project and additional instructions. 
 
-* lite-device-resolver - illustrates DeviceResolver functionality and usage.
+* **lite-device-resolver** - illustrates DeviceResolver functionality and usage.
 
-* lite-site-preference-handler - illustrates SitePreferenceHandler functionality.
+* **lite-site-preference-handler** - illustrates SitePreferenceHandler functionality.
 
-* lite-site-switcher-handler - illustrates SiteSwitcherHandler functionality.
+* **lite-site-switcher-handler** - illustrates SiteSwitcherHandler functionality.
 
-* lite-showcase - combines all features of Spring Mobile to showcase the use of the "urlPath" site switching.
+* **lite-device-delegating-view-resolver** - example showing view names adjusted based on device.
 
-* thorax-lumbar-client - showcases the use of Spring Mobile with JavaScript libraries
+* **lite-showcase** - combines all features of Spring Mobile to showcase the use of the "urlPath" site switching.
+
+* **thorax-lumbar-client** - showcases the use of Spring Mobile with JavaScript libraries
 
 ## Contributor Guidelines
 
