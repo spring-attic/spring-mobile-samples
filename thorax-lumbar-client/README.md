@@ -1,57 +1,62 @@
-thorax-lumbar-client
-====================
-This sample demonstrates the use of Spring Mobile to direct requests coming from a variety of devices
-to device-specific content that is created as the result of building a Thorax project with Lumbar.
+# thorax-lumbar-client
 
-From the description on its website (http://walmartlabs.github.com/lumbar/), Lumbar is a js-build tool 
-that takes a general codebase and list of platforms to generate modular platform specific applications.
-What that means is that Lumbar pulls together commons HTML, JavaScript, CSS, and other resources along
-with resources that are specific to distinct platforms and creates an individual platform-specific
-application for each platform defined in its build file (lumbar.json).
+A [Spring Mobile] sample app demonstrating the use of Spring Mobile to direct requests coming from a variety of devices to device-specific content that is created as the result of building a Thorax project with Lumbar.
 
-Thorax (http://walmartlabs.github.com/thorax/) is another project from WalmartLabs that extends the
-popular Backbone JavaScript framework to be more opinionated and offer more features.
 
-Spring Mobile is well-suited for directing requests to platform-specific URLs and Lumbar is well-
-suited for created platform-spefific application websites. This seems like a natural match and is what
-is demonstrated in this sample.
+## Overview
 
-Build Instructions
-------------------
-In order to build this application, you must have Lumbar installed. You do not need to install Thorax
-unless you intend to use the Thorax command-line tool to further extend the sample.
+From the description on its website, [Lumbar] is a js-build tool that takes a general codebase and list of platforms to generate modular platform specific applications. What that means is that Lumbar pulls together commons HTML, JavaScript, CSS, and other resources along with resources that are specific to distinct platforms and creates an individual platform-specific application for each platform defined in its build file (lumbar.json).
 
-To install Lumbar use the node package manager:
+[Thorax] is another project from [WalmartLabs] that extends the popular [Backbone] JavaScript framework to be more opinionated and offer more features. 
 
-   npm install -g lumbar
+[Spring Mobile] is well-suited for directing requests to platform-specific URLs and Lumbar is well-suited for created platform-specific application web sites. This seems like a natural match and is what is demonstrated in this sample.
+
+
+##Build and Deploy
+
+In order to build this application, you must have Lumbar installed. You do not need to install Thorax unless you intend to use the Thorax command-line tool to further extend the sample.
+
+1. Install Lumbar using the node package manager:
+
+		$ npm install -g lumbar
    
-Or, to install Thorax along with Lumbar:
+	Or, install Thorax along with Lumbar:
 
-   npm install -g lumbar thorax
+		$ npm install -g lumbar thorax
    
-Although you can run the "lumbar" command at the command line to build only the Thorax portion of
-the application, we've added tasks to the Gradle build to incorporate the Lumbar build into the Spring
-Mobile project. To run *only* the Lumbar portion of the build:
+2. Although you can run the "lumbar" command at the command line to build only the Thorax portion of the application, we've added tasks to the [Gradle] build to incorporate the Lumbar build into the Spring Mobile project. To run *only* the Lumbar portion of the build:
 
-   gradlew lumbar
+		$ ./gradlew lumbar
    
-Or, to create a WAR file that includes the Spring MVC/Mobile application and the Lumbar-built
-platform-specific artifacts:
+	Alternatively, you may create a WAR file that includes the Spring MVC/Mobile application and the Lumbar-built platform-specific artifacts:
 
-   gradlew build
+		$ ./gradlew build
    
-The build task will run the lumbar task prior to packaging the application in a WAR file.
+	_Note: The build task will run the lumbar task prior to packaging the application in a WAR file._
 
-You may also run the application in Tomcat using the Tomcat Gradle pluing:
+3. Deploy and run the application in Tomcat using the Tomcat Gradle plugin:
 
-   gradlew tomcatRunWar
+		$ ./gradlew tomcatRunWar
 
-Then point your browser at http://localhost:8080/thorax-client
+4. Access the project at the following URL:
 
-Depending on whether your browser is a regular, tablet, or mobile client, you'll be redirected
-to the platform-specific version of the application.
+	[http://localhost:8080/thorax-client]
 
-Note that it is important that you run Gradle with the tomcatRunWar task and not the tomcatRun
-task. The tomcatRunWar task will ensure that the Lumbar build has taken place and will include the
-Lumbar-built artifacts in the running application.
+	Depending on whether your browser is a normal, mobile, or tablet client, you will be redirected to the platform-specific version of the application.
 
+	_Note: it is important that you run Gradle with the tomcatRunWar task and not the tomcatRun task. The tomcatRunWar task will ensure that the Lumbar build has taken place and will include the Lumbar-built artifacts in the running application._
+
+
+## License
+
+[Spring Mobile] is released under version 2.0 of the [Apache License].
+
+
+[Spring Mobile]: http://www.springsource.org/spring-mobile
+[Lumbar]: http://walmartlabs.github.com/lumbar/
+[Thorax]: http://walmartlabs.github.com/thorax/
+[WalmartLabs]: http://www.walmartlabs.com/
+[Backbone]: http://backbonejs.org/
+[Gradle]: http://www.gradle.org/
+[http://localhost:8080/thorax-client]: http://localhost:8080/thorax-client
+[Apache License]: http://www.apache.org/licenses/LICENSE-2.0
