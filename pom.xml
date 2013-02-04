@@ -31,7 +31,7 @@
 		<org.aspectj-version>1.6.9</org.aspectj-version>
 		<org.slf4j-version>1.6.1</org.slf4j-version>
 		<log4j-version>1.2.16</log4j-version>
-		<javax.servlet.api-version>2.5</javax.servlet.api-version>
+		<javax.servlet.api-version>3.0.1</javax.servlet.api-version>
 		<javax.servlet.jsp-version>2.1</javax.servlet.jsp-version>
 		<javax.servlet.jstl-version>1.2</javax.servlet.jstl-version>
 		<junit-version>4.9</junit-version>
@@ -113,7 +113,7 @@
 		<!-- Servlet -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
+			<artifactId>javax.servlet-api</artifactId>
 			<version>${javax.servlet.api-version}</version>
 			<scope>provided</scope>
 		</dependency>
