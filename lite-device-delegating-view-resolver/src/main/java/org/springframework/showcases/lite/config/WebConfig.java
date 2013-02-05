@@ -42,16 +42,19 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
 	// implementing WebMvcConfigurer
 
+	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(new DeviceResolverHandlerInterceptor());
 		registry.addInterceptor(new SitePreferenceHandlerInterceptor());
 	}
 
+	@Override
 	public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
 //		argumentResolvers.add(new DeviceHandlerMethodArgumentResolver());
 		argumentResolvers.add(new SitePreferenceHandlerMethodArgumentResolver());
 	}
 
+	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
 	}

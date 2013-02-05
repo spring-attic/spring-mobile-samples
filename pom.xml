@@ -36,6 +36,7 @@
 		<javax.servlet.jstl-version>1.2</javax.servlet.jstl-version>
 		<junit-version>4.9</junit-version>
 		<org.apache.maven.plugins.compiler-version>3.0</org.apache.maven.plugins.compiler-version>
+		<org.apache.maven.plugins.war-version>2.3</org.apache.maven.plugins.war-version>
 		<org.codehaus.mojo.aspectj-version>1.4</org.codehaus.mojo.aspectj-version>
 		<org.codehaus.mojo.tomcat-version>1.1</org.codehaus.mojo.tomcat-version>
 	</properties>
@@ -158,12 +159,20 @@
 				</configuration>
 			</plugin>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>${org.apache.maven.plugins.war-version}</version>
+				<configuration>
+					<!-- Servlet 3 wars do not require a web.xml -->
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>aspectj-maven-plugin</artifactId>
 				<version>${org.codehaus.mojo.aspectj-version}</version>
 				<dependencies>
-					<!-- NB: You must use Maven 2.0.9 or above or these are ignored (see 
-						MNG-2972) -->
+					<!-- NB: You must use Maven 2.0.9 or above or these are ignored (see MNG-2972) -->
 					<dependency>
 						<groupId>org.aspectj</groupId>
 						<artifactId>aspectjrt</artifactId>
@@ -203,9 +212,9 @@
 				</executions>
 			</plugin>
 			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>tomcat-maven-plugin</artifactId>
-				<version>${org.codehaus.mojo.tomcat-version}</version>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.0</version>
 			</plugin>
 		</plugins>
 	</build>

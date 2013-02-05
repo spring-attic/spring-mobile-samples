@@ -43,6 +43,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
 	// implementing WebMvcConfigurer
 
+	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 
 		/* 
@@ -57,6 +58,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		registry.addInterceptor(new SitePreferenceHandlerInterceptor());
 	}
 
+	@Override
 	public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
 
 		// argument resolver that supports accessing the current device from the web request 
@@ -66,6 +68,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		argumentResolvers.add(new SitePreferenceHandlerMethodArgumentResolver());
 	}
 
+	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
 	}
