@@ -20,6 +20,21 @@ The following sample applications demonstrate the capabilities of [Spring Mobile
 * [thorax-lumbar-client] - showcases the use of Spring Mobile with JavaScript libraries
 
 
+## Build and Deploy
+
+Most of the sample apps can be built and run by executing the following commands from within the app directory. See the individual README files for additional information.
+
+1. Build the app:
+
+		$ mvn clean install
+
+2. Deploy the .war to a Servlet 3 ServletContainer. This can be done via Maven on the command-line by running:
+
+		$ mvn tomcat7:run
+
+	_Note: Alternatively, you may import the project into your IDE and deploy to a Servlet 3 container such as Tomcat 7._
+
+
 ## Contributing
 
 [Pull requests] are welcome. See the [contributor guidelines] for details.
