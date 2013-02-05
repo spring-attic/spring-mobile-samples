@@ -15,6 +15,8 @@ The following sample applications demonstrate the capabilities of [Spring Mobile
 
 * [lite-device-delegating-view-resolver] - example showing view names adjusted based on device.
 
+* [lite-device-delegating-view-resolver-xml] - example using XML based configuration, showing view names adjusted based on device.
+
 * [lite-showcase] - combines all features of Spring Mobile to showcase the use of the "urlPath" site switching.
 
 * [thorax-lumbar-client] - showcases the use of Spring Mobile with JavaScript libraries
@@ -57,6 +59,7 @@ See a [screencast demonstration] based on [Spring Mobile 1.0.0.M2].
 [lite-site-preference-handler]: https://github.com/SpringSource/spring-mobile-samples/tree/master/lite-site-preference-handler
 [lite-site-switcher-handler]: https://github.com/SpringSource/spring-mobile-samples/tree/master/lite-site-switcher-handler
 [lite-device-delegating-view-resolver]: https://github.com/SpringSource/spring-mobile-samples/tree/master/lite-device-delegating-view-resolver
+[lite-device-delegating-view-resolver-xml]: https://github.com/SpringSource/spring-mobile-samples/tree/master/lite-device-delegating-view-resolver-xml
 [lite-showcase]: https://github.com/SpringSource/spring-mobile-samples/tree/master/lite-showcase
 [thorax-lumbar-client]: https://github.com/SpringSource/spring-mobile-samples/tree/master/thorax-lumbar-client
 [Pull requests]: http://help.github.com/send-pull-requests

@@ -21,6 +21,7 @@
 		<module>/lite-site-preference-handler</module>
 		<module>/lite-site-switcher-handler</module>
 		<module>/lite-device-delegating-view-resolver</module>
+		<module>/lite-device-delegating-view-resolver-xml</module>
 		<module>/lite-showcase</module>
 	</modules>
 
