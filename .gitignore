@@ -1,6 +1,25 @@
+# Operating System Files
+
+*.DS_Store
+Thumbs.db
+
+# Build Artifacts
+
+.gradle/
+build/
+target/
+bin/
+src/main/webapp/META-INF
+
+# Eclipse Project Files
+
 .classpath
 .project
-.settings
-bin
-target
-.DS_Store
+.settings/
+
+# IntelliJ IDEA Files
+
+*.iml
+*.ipr
+*.iws
+*.idea
