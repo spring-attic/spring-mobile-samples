@@ -12,7 +12,7 @@
 
 	<!-- Application Loggers -->
 	<logger name="org.springframework.showcases.lite">
-		<level value="info" />
+		<level value="debug" />
 	</logger>
 
 	<!-- 3rdparty Loggers -->
@@ -30,6 +30,10 @@
 
 	<logger name="org.springframework.web">
 		<level value="info" />
+	</logger>
+
+	<logger name="org.springframework.mobile">
+		<level value="debug" />
 	</logger>
 
 	<!-- Root Logger -->
