@@ -19,6 +19,7 @@ package org.springframework.showcases.lite.config;
 import java.util.List;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mobile.device.DeviceHandlerMethodArgumentResolver;
 import org.springframework.mobile.device.DeviceResolverHandlerInterceptor;
@@ -37,6 +38,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
  */
 @Configuration
 @EnableWebMvc
+@ComponentScan(basePackages = "org.springframework.showcases.lite")
 public class WebConfig extends WebMvcConfigurerAdapter {
 
 	// implementing WebMvcConfigurer
