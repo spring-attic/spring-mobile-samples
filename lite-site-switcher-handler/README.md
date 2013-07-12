@@ -9,7 +9,7 @@ A [Spring Mobile] sample application demonstrating many of the Site Switcher cap
 
 2. Access the sample application at the following URL:
 
-	[http://localhost:8080/lite-site-switcher-handler][app-url]
+    [http://localhost:8080/lite-site-switcher-handler][app-url]
 
     > **Note**: access the site from your browser, Android emulator or iOS simulator to demonstrate the functionality.
 

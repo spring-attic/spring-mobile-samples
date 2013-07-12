@@ -9,7 +9,7 @@ A [Spring Mobile] sample application demonstrating the Device Resolver capabilit
 
 2. Access the sample application at the following URL:
 
-	[http://localhost:8080/lite-device-resolver][app-url]
+    [http://localhost:8080/lite-device-resolver][app-url]
 
     > **Note**: access the site from your browser, Android emulator or iOS simulator to demonstrate the functionality.
 

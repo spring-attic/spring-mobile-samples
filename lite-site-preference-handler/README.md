@@ -9,7 +9,7 @@ A [Spring Mobile] sample application demonstrating the Site Preference capabilit
 
 2. Access the sample application at the following URL:
 
-	[http://localhost:8080/lite-site-preference-handler][app-url]
+    [http://localhost:8080/lite-site-preference-handler][app-url]
 
 
 ## License

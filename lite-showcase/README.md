@@ -13,7 +13,7 @@ A [Spring Mobile] sample application demonstrating many of the capabilities of t
 
 2. Access the sample application at the following URL:
 
-	[http://localhost:8080/lite-showcase][app-url]
+    [http://localhost:8080/lite-showcase][app-url]
 
     > **Note**: access the site from your browser, Android emulator or iOS simulator to demonstrate the functionality.
 
