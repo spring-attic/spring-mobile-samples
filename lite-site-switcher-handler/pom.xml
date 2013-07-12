@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.mobile</groupId>
 		<artifactId>spring-mobile-samples</artifactId>
-		<version>1.1.0.BUILD-SNAPSHOT</version>
+		<version>0.1.0</version>
 	</parent>
 
 	<artifactId>lite-site-switcher-handler</artifactId>
