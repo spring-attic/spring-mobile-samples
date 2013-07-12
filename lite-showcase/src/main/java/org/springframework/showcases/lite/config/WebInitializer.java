@@ -16,14 +16,26 @@
 
 package org.springframework.showcases.lite.config;
 
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /**
  * @author Roy Clarkson
  */
-@Configuration
-@ComponentScan(basePackages = "org.springframework.showcases.lite")
-public class ComponentConfig {
+public class WebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+
+	@Override
+	protected String[] getServletMappings() {
+		return new String[] { "/", "/mobile/*", "/tablet/*" };
+	}
+
+	@Override
+	protected Class<?>[] getRootConfigClasses() {
+		return null;
+	}
+
+	@Override
+	protected Class<?>[] getServletConfigClasses() {
+		return new Class[] { WebConfig.class };
+	}
 
 }
