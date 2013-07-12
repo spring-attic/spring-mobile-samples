@@ -1,6 +1,6 @@
 # thorax-lumbar-client
 
-A [Spring Mobile] sample app demonstrating the use of Spring Mobile to direct requests coming from a variety of devices to device-specific content that is created as the result of building a Thorax project with Lumbar.
+A [Spring Mobile] sample application demonstrating the use of Spring Mobile to direct requests coming from a variety of devices to device-specific content that is created as the result of building a Thorax project with Lumbar.
 
 
 ## Overview
@@ -18,33 +18,43 @@ In order to build this application, you must have Lumbar installed. You do not n
 
 1. Install Lumbar using the node package manager:
 
-		$ npm install -g lumbar
+    ```sh
+    $ npm install -g lumbar
+    ```
    
 	Or, install Thorax along with Lumbar:
 
-		$ npm install -g lumbar thorax
+    ```sh
+    $ npm install -g lumbar thorax
+    ```
    
 2. Although you can run the "lumbar" command at the command line to build only the Thorax portion of the application, we've added tasks to the [Gradle] build to incorporate the Lumbar build into the Spring Mobile project. To run *only* the Lumbar portion of the build:
 
-		$ ./gradlew lumbar
+    ```sh
+    $ ./gradlew lumbar
+    ```
    
 	Alternatively, you may create a WAR file that includes the Spring MVC/Mobile application and the Lumbar-built platform-specific artifacts:
 
-		$ ./gradlew build
+    ```sh
+    $ ./gradlew build
+    ```
    
-	_Note: The build task will run the lumbar task prior to packaging the application in a WAR file._
+    > **Note**: The build task will run the lumbar task prior to packaging the application in a WAR file.
 
 3. Deploy and run the application in Tomcat using the Tomcat Gradle plugin:
 
-		$ ./gradlew tomcatRunWar
+    ```sh
+    $ ./gradlew tomcatRunWar
+    ```
 
 4. Access the project at the following URL:
 
-	[http://localhost:8080/thorax-client]
+	[http://localhost:8080/thorax-client][app-url]
 
 	Depending on whether your browser is a normal, mobile, or tablet client, you will be redirected to the platform-specific version of the application.
 
-	_Note: it is important that you run Gradle with the tomcatRunWar task and not the tomcatRun task. The tomcatRunWar task will ensure that the Lumbar build has taken place and will include the Lumbar-built artifacts in the running application._
+	> **Note**: it is important that you run Gradle with the tomcatRunWar task and not the tomcatRun task. The tomcatRunWar task will ensure that the Lumbar build has taken place and will include the Lumbar-built artifacts in the running application.
 
 
 ## License
@@ -58,5 +68,5 @@ In order to build this application, you must have Lumbar installed. You do not n
 [WalmartLabs]: http://www.walmartlabs.com/
 [Backbone]: http://backbonejs.org/
 [Gradle]: http://www.gradle.org/
-[http://localhost:8080/thorax-client]: http://localhost:8080/thorax-client
+[app-url]: http://localhost:8080/thorax-client
 [Apache License]: http://www.apache.org/licenses/LICENSE-2.0

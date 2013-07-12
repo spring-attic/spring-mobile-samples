@@ -5,7 +5,7 @@
 
 ## Sample Applications
 
-The following sample applications demonstrate the capabilities of [Spring Mobile] for server-side device detection and handling. See the README within each sample project directory for more information and additional instructions. 
+The following sample applications demonstrate the capabilities of [Spring Mobile] for server-side device detection and handling. See the README within each sample project for more information and additional instructions.
 
 * [lite-device-resolver] - illustrates DeviceResolver functionality and usage.
 
@@ -24,20 +24,24 @@ The following sample applications demonstrate the capabilities of [Spring Mobile
 
 ## Build and Deploy
 
-Most of the sample apps can be built and run by executing the following commands from within the app directory. See the individual README files for additional information.
+Most of the sample apps can be built and run using the following commands from within the sample's folder.
 
 1. Build the app:
 
-		$ mvn clean install
+    ```sh
+    $ mvn clean package
+    ```
 
-2. Deploy the .war to a Servlet 3 ServletContainer. This can be done via Maven on the command-line by running:
+2. Deploy the .war to a Servlet 3 ServletContainer using Maven:
 
-		$ mvn tomcat7:run
+    ```sh
+    $ mvn tomcat7:run
+    ```
 
-	_Note: Alternatively, you may import the project into your IDE and deploy to a Servlet 3 container such as Tomcat 7._
+    > **Note**: you may also import the project into your IDE and deploy to a Servlet 3 container such as Tomcat 7.
 
 
-## Contributing
+## Contribute
 
 [Pull requests] are welcome. See the [contributor guidelines] for details.
 
@@ -55,13 +59,13 @@ See a [screencast demonstration] based on [Spring Mobile 1.0.0.M2].
 [Spring Mobile]: http://www.springsource.org/spring-mobile
 [Spring MVC]: http://static.springsource.org/spring/docs/current/spring-framework-reference/html/mvc.html
 [Spring Mobile on GitHub]: https://github.com/SpringSource/spring-mobile
-[lite-device-resolver]: https://github.com/SpringSource/spring-mobile-samples/tree/master/lite-device-resolver
-[lite-site-preference-handler]: https://github.com/SpringSource/spring-mobile-samples/tree/master/lite-site-preference-handler
-[lite-site-switcher-handler]: https://github.com/SpringSource/spring-mobile-samples/tree/master/lite-site-switcher-handler
-[lite-device-delegating-view-resolver]: https://github.com/SpringSource/spring-mobile-samples/tree/master/lite-device-delegating-view-resolver
-[lite-device-delegating-view-resolver-xml]: https://github.com/SpringSource/spring-mobile-samples/tree/master/lite-device-delegating-view-resolver-xml
-[lite-showcase]: https://github.com/SpringSource/spring-mobile-samples/tree/master/lite-showcase
-[thorax-lumbar-client]: https://github.com/SpringSource/spring-mobile-samples/tree/master/thorax-lumbar-client
+[lite-device-resolver]: ./lite-device-resolver
+[lite-site-preference-handler]: ./lite-site-preference-handler
+[lite-site-switcher-handler]: ./lite-site-switcher-handler
+[lite-device-delegating-view-resolver]: ./lite-device-delegating-view-resolver
+[lite-device-delegating-view-resolver-xml]: ./lite-device-delegating-view-resolver-xml
+[lite-showcase]: ./lite-showcase
+[thorax-lumbar-client]: ./thorax-lumbar-client
 [Pull requests]: http://help.github.com/send-pull-requests
 [contributor guidelines]: https://github.com/SpringSource/spring-mobile/wiki/Contributor-Guidelines
 [screencast demonstration]: http://s3.springsource.org/MVC/spring-mobile-1.0.0.M2-screencast.mov

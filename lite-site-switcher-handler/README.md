@@ -1,15 +1,17 @@
 # lite-site-switcher-handler
 
-A [Spring Mobile] sample app demonstrating many of the Site Switcher capabilities of the Spring Mobile Device module.
+A [Spring Mobile] sample application demonstrating many of the Site Switcher capabilities of the Spring Mobile Device module.
 
 
 ## Build and Deploy
 
-Access the project at the following URL:
+1. See the main [README](../README.md) for build instructions.
 
-	[http://localhost:8080/lite-site-switcher-handler]
+2. Access the sample application at the following URL:
 
-_Note: Accessing this URL from your browser versus an Android emulator or iOS simulator will demonstrate the functionality_
+	[http://localhost:8080/lite-site-switcher-handler][app-url]
+
+    > **Note**: access the site from your browser, Android emulator or iOS simulator to demonstrate the functionality.
 
 
 ## License
@@ -17,6 +19,6 @@ _Note: Accessing this URL from your browser versus an Android emulator or iOS si
 [Spring Mobile] is released under version 2.0 of the [Apache License].
 
 
-[http://localhost:8080/lite-site-switcher-handler]: http://localhost:8080/lite-site-switcher-handler
+[app-url]: http://localhost:8080/lite-site-switcher-handler
 [Spring Mobile]: http://www.springsource.org/spring-mobile
 [Apache License]: http://www.apache.org/licenses/LICENSE-2.0
