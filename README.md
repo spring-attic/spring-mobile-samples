@@ -9,6 +9,8 @@ The following sample applications demonstrate the capabilities of [Spring Mobile
 
 * [lite-device-resolver] - illustrates DeviceResolver functionality and usage.
 
+* [lite-device-resolver-xml] - illustrates DeviceResolver functionality and usage.
+
 * [lite-site-preference-handler] - illustrates SitePreferenceHandler functionality.
 
 * [lite-site-switcher-handler] - illustrates SiteSwitcherHandler functionality.
@@ -60,6 +62,7 @@ See a [screencast demonstration] based on [Spring Mobile 1.0.0.M2].
 [Spring MVC]: http://static.springsource.org/spring/docs/current/spring-framework-reference/html/mvc.html
 [Spring Mobile on GitHub]: https://github.com/SpringSource/spring-mobile
 [lite-device-resolver]: ./lite-device-resolver
+[lite-device-resolver-xml]: ./lite-device-resolver-xml
 [lite-site-preference-handler]: ./lite-site-preference-handler
 [lite-site-switcher-handler]: ./lite-site-switcher-handler
 [lite-device-delegating-view-resolver]: ./lite-device-delegating-view-resolver
