@@ -1,27 +1,21 @@
 # Spring Mobile Samples
 
-[Spring Mobile] is an extension to [Spring MVC] that aims to simplify the development of mobile web applications. This repository contains sample projects illustrating usage of Spring Mobile. See [Spring Mobile on GitHub] for more information about building from source.
+[Spring Mobile] is an extension to the popular web framework [Spring MVC], that aims to simplify the development of mobile web applications. This repository contains sample projects illustrating usage of Spring Mobile. See [Spring Mobile on GitHub] for more information about building from source.
 
 
 ## Sample Applications
 
 The following sample applications demonstrate the capabilities of [Spring Mobile] for server-side device detection and handling. See the README within each sample project for more information and additional instructions.
 
-* [lite-device-resolver] - illustrates DeviceResolver functionality and usage.
-
-* [lite-device-resolver-xml] - illustrates DeviceResolver functionality and usage.
-
-* [lite-site-preference-handler] - illustrates SitePreferenceHandler functionality.
-
-* [lite-site-switcher-handler] - illustrates SiteSwitcherHandler functionality.
-
-* [lite-device-delegating-view-resolver] - example showing view names adjusted based on device.
-
-* [lite-device-delegating-view-resolver-xml] - example using XML based configuration, showing view names adjusted based on device.
-
-* [lite-showcase] - combines all features of Spring Mobile to showcase the use of the "urlPath" site switching.
-
-* [thorax-lumbar-client] - showcases the use of Spring Mobile with JavaScript libraries
+ - [lite-device-resolver] - illustrates DeviceResolver functionality and usage 
+ - [lite-device-resolver-xml] - example using XML based configuration, illustrates DeviceResolver functionality and usage
+ - [lite-site-preference-handler] - illustrates SitePreferenceHandler functionality
+ - [lite-site-switcher-handler] - illustrates SiteSwitcherHandler functionality
+ - [lite-device-delegating-view-resolver] - example showing view names adjusted based on device
+ - [lite-device-delegating-view-resolver-xml] - example using XML based configuration, showing view names adjusted based on device 
+ - [lite-device-delegating-view-resolver-thymeleaf] - example showing view names adjusted based on device, integrated with Thymeleaf for view resolution
+ - [lite-showcase] - combines all features of Spring Mobile to showcase the use of the "urlPath" site switching
+ - [thorax-lumbar-client] - showcases the use of Spring Mobile with JavaScript libraries
 
 
 ## Build and Deploy
@@ -66,6 +60,7 @@ See a [screencast demonstration] based on [Spring Mobile 1.0.0.M2].
 [lite-site-preference-handler]: ./lite-site-preference-handler
 [lite-site-switcher-handler]: ./lite-site-switcher-handler
 [lite-device-delegating-view-resolver]: ./lite-device-delegating-view-resolver
+[lite-device-delegating-view-resolver-thymeleaf]: ./lite-device-delegating-view-resolver-thymeleaf
 [lite-device-delegating-view-resolver-xml]: ./lite-device-delegating-view-resolver-xml
 [lite-showcase]: ./lite-showcase
 [thorax-lumbar-client]: ./thorax-lumbar-client

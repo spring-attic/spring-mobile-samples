@@ -5,6 +5,7 @@ A [Spring Mobile] sample application demonstrating many of the capabilities of t
 * "Lite" device resolution through the use of DeviceResolverHandlerInterceptor 
 * Site preference management
 * View resolution with LiteDeviceDelegatingViewResolver
+* XML based configuration
 
 
 ## Build and Deploy
