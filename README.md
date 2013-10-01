@@ -7,14 +7,14 @@
 
 The following sample applications demonstrate the capabilities of [Spring Mobile] for server-side device detection and handling. See the README within each sample project for more information and additional instructions.
 
- - [lite-device-resolver] - illustrates DeviceResolver functionality and usage 
- - [lite-device-resolver-xml] - example using XML based configuration, illustrates DeviceResolver functionality and usage
- - [lite-site-preference-handler] - illustrates SitePreferenceHandler functionality
- - [lite-site-switcher-handler] - illustrates SiteSwitcherHandler functionality
  - [lite-device-delegating-view-resolver] - example showing view names adjusted based on device
  - [lite-device-delegating-view-resolver-xml] - example using XML based configuration, showing view names adjusted based on device 
  - [lite-device-delegating-view-resolver-thymeleaf] - example showing view names adjusted based on device, integrated with Thymeleaf for view resolution
- - [lite-showcase] - combines all features of Spring Mobile to showcase the use of the "urlPath" site switching
+ - [lite-device-resolver] - illustrates DeviceResolver functionality and usage 
+ - [lite-device-resolver-xml] - example using XML based configuration, illustrates DeviceResolver functionality and usage
+ - [lite-site-preference-handler] - illustrates SitePreferenceHandler functionality
+ - [lite-site-switcher-handler-mdot] - illustrates SiteSwitcherHandler functionality using the 'mDot' strategy
+ - [lite-site-switcher-handler-urlpath] - combines all features of Spring Mobile to showcase the use of the 'urlPath' site switching strategy
  - [thorax-lumbar-client] - showcases the use of Spring Mobile with JavaScript libraries
 
 
@@ -55,14 +55,14 @@ See a [screencast demonstration] based on [Spring Mobile 1.0.0.M2].
 [Spring Mobile]: http://www.springsource.org/spring-mobile
 [Spring MVC]: http://static.springsource.org/spring/docs/current/spring-framework-reference/html/mvc.html
 [Spring Mobile on GitHub]: https://github.com/SpringSource/spring-mobile
-[lite-device-resolver]: ./lite-device-resolver
-[lite-device-resolver-xml]: ./lite-device-resolver-xml
-[lite-site-preference-handler]: ./lite-site-preference-handler
-[lite-site-switcher-handler]: ./lite-site-switcher-handler
 [lite-device-delegating-view-resolver]: ./lite-device-delegating-view-resolver
 [lite-device-delegating-view-resolver-thymeleaf]: ./lite-device-delegating-view-resolver-thymeleaf
 [lite-device-delegating-view-resolver-xml]: ./lite-device-delegating-view-resolver-xml
-[lite-showcase]: ./lite-showcase
+[lite-device-resolver]: ./lite-device-resolver
+[lite-device-resolver-xml]: ./lite-device-resolver-xml
+[lite-site-preference-handler]: ./lite-site-preference-handler
+[lite-site-switcher-handler-mdot]: ./lite-site-switcher-handler-mdot
+[lite-site-switcher-handler-urlpath]: ./lite-site-switcher-handler-urlpath
 [thorax-lumbar-client]: ./thorax-lumbar-client
 [Pull requests]: http://help.github.com/send-pull-requests
 [contributor guidelines]: https://github.com/SpringSource/spring-mobile/wiki/Contributor-Guidelines

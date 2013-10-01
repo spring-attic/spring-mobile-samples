@@ -9,8 +9,8 @@
 		<version>0.1.0</version>
 	</parent>
 
-	<artifactId>lite-showcase</artifactId>
+	<artifactId>lite-site-switcher-handler-urlpath</artifactId>
 	<packaging>war</packaging>
-	<name>lite-showcase</name>
+	<name>lite-site-switcher-handler-urlpath</name>
 
 </project>

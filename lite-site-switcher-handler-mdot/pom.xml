@@ -9,8 +9,8 @@
 		<version>0.1.0</version>
 	</parent>
 
-	<artifactId>lite-site-switcher-handler</artifactId>
+	<artifactId>lite-site-switcher-handler-mdot</artifactId>
 	<packaging>war</packaging>
-	<name>lite-site-switcher-handler</name>
+	<name>lite-site-switcher-handler-mdot</name>
 
 </project>
