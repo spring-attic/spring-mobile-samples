@@ -18,7 +18,7 @@
 			</c:choose>
 		</p>
 		<footer>
-			An Apache-licensed technology showcase by SpringSource.
+			An Apache-licensed technology showcase by Spring.
 		</footer>
 	</body>
 </html>

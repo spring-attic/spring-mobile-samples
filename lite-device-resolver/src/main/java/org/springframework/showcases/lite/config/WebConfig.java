@@ -40,16 +40,26 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @ComponentScan(basePackages = "org.springframework.showcases.lite")
 public class WebConfig extends WebMvcConfigurerAdapter {
 
+	@Bean
+	public DeviceResolverHandlerInterceptor deviceResolverHandlerInterceptor() {
+		return new DeviceResolverHandlerInterceptor();
+	}
+
+	@Bean
+	public DeviceHandlerMethodArgumentResolver deviceHandlerMethodArgumentResolver() {
+		return new DeviceHandlerMethodArgumentResolver();
+	}
+
 	// implementing WebMvcConfigurer
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(new DeviceResolverHandlerInterceptor());
+		registry.addInterceptor(deviceResolverHandlerInterceptor());
 	}
 
 	@Override
 	public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
-		argumentResolvers.add(new DeviceHandlerMethodArgumentResolver());
+		argumentResolvers.add(deviceHandlerMethodArgumentResolver());
 	}
 
 	@Override
