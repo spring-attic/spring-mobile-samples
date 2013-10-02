@@ -41,18 +41,33 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @ComponentScan(basePackages = "org.springframework.showcases.lite")
 public class WebConfig extends WebMvcConfigurerAdapter {
 
+	@Bean
+	public DeviceResolverHandlerInterceptor deviceResolverHandlerInterceptor() {
+		return new DeviceResolverHandlerInterceptor();
+	}
+
+	@Bean
+	public SiteSwitcherHandlerInterceptor siteSwitcherHandlerInterceptor() {
+		return SiteSwitcherHandlerInterceptor.urlPath("/mobile", "/tablet",
+				"/lite-site-switcher-handler-urlpath");
+	}
+
+	@Bean
+	public SitePreferenceHandlerMethodArgumentResolver sitePreferenceHandlerMethodArgumentResolver() {
+		return new SitePreferenceHandlerMethodArgumentResolver();
+	}
+
 	// implementing WebMvcConfigurer
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(new DeviceResolverHandlerInterceptor());
-		//registry.addInterceptor(SiteSwitcherHandlerInterceptor.mDot("testdomain.com"));
-		registry.addInterceptor(SiteSwitcherHandlerInterceptor.urlPath("/mobile", "/tablet", "/lite-showcase"));
+		registry.addInterceptor(deviceResolverHandlerInterceptor());
+		registry.addInterceptor(siteSwitcherHandlerInterceptor());
 	}
 
 	@Override
 	public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
-		argumentResolvers.add(new SitePreferenceHandlerMethodArgumentResolver());
+		argumentResolvers.add(sitePreferenceHandlerMethodArgumentResolver());
 	}
 
 	@Override

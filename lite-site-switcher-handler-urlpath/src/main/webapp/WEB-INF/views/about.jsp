@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Spring Mobile | Lite Showcase</title>
+		<title>Spring Mobile | Lite Site Switcher Handler urlPath</title>
 	</head>
 	<body>
 		<header>
@@ -11,7 +11,7 @@
 		</header>
 		<p>Return to the <a href="<c:url value="/" />">Home</a> page.</p>
 		<footer>
-			An Apache-licensed technology showcase by SpringSource.
+			An Apache-licensed technology showcase by Spring.
 		</footer>
 		<aside id="site-preference">
 			<p>Site: 
