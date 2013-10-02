@@ -1,3 +1,3 @@
 <footer>
-	An Apache-licensed technology showcase by SpringSource.
+	An Apache-licensed technology showcase by Spring.
 </footer>

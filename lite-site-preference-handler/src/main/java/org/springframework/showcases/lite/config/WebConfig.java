@@ -23,7 +23,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mobile.device.DeviceHandlerMethodArgumentResolver;
 import org.springframework.mobile.device.DeviceResolverHandlerInterceptor;
-import org.springframework.mobile.device.DeviceWebArgumentResolver;
 import org.springframework.mobile.device.site.SitePreferenceHandlerInterceptor;
 import org.springframework.mobile.device.site.SitePreferenceHandlerMethodArgumentResolver;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
@@ -43,31 +42,61 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @ComponentScan(basePackages = "org.springframework.showcases.lite")
 public class WebConfig extends WebMvcConfigurerAdapter {
 
+	@Bean
+	public DeviceResolverHandlerInterceptor deviceResolverHandlerInterceptor() {
+		return new DeviceResolverHandlerInterceptor();
+	}
+
+	@Bean
+	public SitePreferenceHandlerInterceptor sitePreferenceHandlerInterceptor() {
+		return new SitePreferenceHandlerInterceptor();
+	}
+
+	@Bean
+	public DeviceHandlerMethodArgumentResolver deviceHandlerMethodArgumentResolver() {
+		return new DeviceHandlerMethodArgumentResolver();
+	}
+
+	@Bean
+	public SitePreferenceHandlerMethodArgumentResolver sitePreferenceHandlerMethodArgumentResolver() {
+		return new SitePreferenceHandlerMethodArgumentResolver();
+	}
+
 	// implementing WebMvcConfigurer
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 
-		/* 
-		 * Include the handler for device resolution. Strictly speaking, a device resolver is not required for site
-		 * preference management. However for this sample application, it's useful to see what device is being resolved.
+		/*
+		 * Include the handler for device resolution. Strictly speaking, a device resolver
+		 * is not required for site preference management. However for this sample
+		 * application, it's useful to see what device is being resolved.
 		 */
-		//registry.addInterceptor(new DeviceResolverHandlerInterceptor());
+		registry.addInterceptor(deviceResolverHandlerInterceptor());
 
 		/*
-		 * Include the handler for site preference management. This handler defaults to using cookie based storage.
+		 * Include the handler for site preference management. This handler defaults to
+		 * using cookie based storage.
 		 */
-		registry.addInterceptor(new SitePreferenceHandlerInterceptor());
+		registry.addInterceptor(sitePreferenceHandlerInterceptor());
 	}
 
 	@Override
 	public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
 
-		// argument resolver that supports accessing the current device from the web request 
-		//argumentResolvers.add(new DeviceHandlerMethodArgumentResolver());
+		/*
+		 * Include the argument resolver that supports accessing the current device from
+		 * the web request. As with the device resolver, this argument resolver is not
+		 * required for site preference management. However for this sample application,
+		 * it's useful to see what device is being resolved.
+		 */
+		argumentResolvers.add(deviceHandlerMethodArgumentResolver());
 
-		// argument resolver that supports accessing the current site preference from the web request
-		argumentResolvers.add(new SitePreferenceHandlerMethodArgumentResolver());
+		/*
+		 * Include the argument resolver that supports accessing the current site
+		 * preference from the web request
+		 */
+		argumentResolvers.add(sitePreferenceHandlerMethodArgumentResolver());
 	}
 
 	@Override
