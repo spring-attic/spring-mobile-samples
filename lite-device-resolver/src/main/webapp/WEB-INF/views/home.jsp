@@ -17,8 +17,5 @@
 				<c:otherwise>Default</c:otherwise>
 			</c:choose>
 		</p>
-		<footer>
-			An Apache-licensed technology showcase by Spring.
-		</footer>
 	</body>
 </html>
