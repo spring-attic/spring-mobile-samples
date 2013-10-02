@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Spring Mobile | Lite Device Resolver</title>
+		<title>Spring Mobile | Lite Device Resolver XML</title>
 	</head>
 	<body>
 		<header>
