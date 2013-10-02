@@ -11,7 +11,7 @@
 		</header>
 		<%@include file="includes/content.jsp" %>
 		<footer>
-			An Apache-licensed technology showcase by SpringSource.
+			An Apache-licensed technology showcase by Spring.
 		</footer>
 		<aside>
 			<p>Home | <a href="<c:url value="/about" />">About</a></p>
