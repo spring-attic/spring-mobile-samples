@@ -20,5 +20,5 @@ A [Spring Mobile] sample application demonstrating the Device Resolver capabilit
 
 
 [app-url]: http://localhost:8080/lite-device-resolver
-[Spring Mobile]: http://www.springsource.org/spring-mobile
+[Spring Mobile]: http://projects.spring.io/spring-mobile
 [Apache License]: http://www.apache.org/licenses/LICENSE-2.0

@@ -25,5 +25,5 @@ A [Spring Mobile] sample application demonstrating many of the capabilities of t
 
 [`urlPath`]: http://docs.spring.io/spring-mobile/docs/1.1.x/reference/html/device.html#site-switcher-handler-interceptor-urlpath
 [app-url]: http://localhost:8080/lite-site-switcher-handler-urlpath
-[Spring Mobile]: http://www.springsource.org/spring-mobile
+[Spring Mobile]: http://projects.spring.io/spring-mobile
 [Apache License]: http://www.apache.org/licenses/LICENSE-2.0

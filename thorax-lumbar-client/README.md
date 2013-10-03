@@ -62,7 +62,7 @@ In order to build this application, you must have Lumbar installed. You do not n
 [Spring Mobile] is released under version 2.0 of the [Apache License].
 
 
-[Spring Mobile]: http://www.springsource.org/spring-mobile
+[Spring Mobile]: http://projects.spring.io/spring-mobile
 [Lumbar]: http://walmartlabs.github.com/lumbar/
 [Thorax]: http://walmartlabs.github.com/thorax/
 [WalmartLabs]: http://www.walmartlabs.com/

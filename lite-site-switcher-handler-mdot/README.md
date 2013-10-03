@@ -28,5 +28,5 @@ A [Spring Mobile] sample application demonstrating the [`mDot`] Site Switcher st
 
 [`mDot`]: http://docs.spring.io/spring-mobile/docs/1.1.x/reference/html/device.html#site-switcher-handler-interceptor-mdot
 [app-url]: http://testdomain.com:8080/lite-site-switcher-handler-mdot
-[Spring Mobile]: http://www.springsource.org/spring-mobile
+[Spring Mobile]: http://projects.spring.io/spring-mobile
 [Apache License]: http://www.apache.org/licenses/LICENSE-2.0

@@ -24,5 +24,5 @@ A [Spring Mobile] sample application demonstrating many of the capabilities of t
 [Spring Mobile] is released under version 2.0 of the [Apache License].
 
 [app-url]: http://localhost:8080/lite-device-delegating-view-resolver-xml
-[Spring Mobile]: http://www.springsource.org/spring-mobile
+[Spring Mobile]: http://projects.spring.io/spring-mobile
 [Apache License]: http://www.apache.org/licenses/LICENSE-2.0

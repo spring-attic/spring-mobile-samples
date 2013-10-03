@@ -1,6 +1,6 @@
 # Spring Mobile Samples
 
-[Spring Mobile] is an extension to the popular web framework [Spring MVC], that aims to simplify the development of mobile web applications. This repository contains sample projects illustrating usage of Spring Mobile. See [Spring Mobile on GitHub] for more information about building from source.
+[Spring Mobile] is an extension to the popular web framework [Spring Web MVC], that aims to simplify the development of mobile web applications. This repository contains sample projects illustrating usage of Spring Mobile. See [Spring Mobile on GitHub] for more information about building from source.
 
 
 ## Sample Applications
@@ -42,19 +42,14 @@ Most of the sample apps can be built and run using the following commands from w
 [Pull requests] are welcome. See the [contributor guidelines] for details.
 
 
-## Additional Resources
-
-See a [screencast demonstration] based on [Spring Mobile 1.0.0.M2].
-
-
 ## License
 
 [Spring Mobile] is released under version 2.0 of the [Apache License].
 
 
-[Spring Mobile]: http://www.springsource.org/spring-mobile
-[Spring MVC]: http://static.springsource.org/spring/docs/current/spring-framework-reference/html/mvc.html
-[Spring Mobile on GitHub]: https://github.com/SpringSource/spring-mobile
+[Spring Mobile]: http://projects.spring.io/spring-mobile
+[Spring Web MVC]: http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html
+[Spring Mobile on GitHub]: https://github.com/spring-projects/spring-mobile
 [lite-device-delegating-view-resolver]: ./lite-device-delegating-view-resolver
 [lite-device-delegating-view-resolver-thymeleaf]: ./lite-device-delegating-view-resolver-thymeleaf
 [lite-device-delegating-view-resolver-xml]: ./lite-device-delegating-view-resolver-xml
@@ -65,7 +60,5 @@ See a [screencast demonstration] based on [Spring Mobile 1.0.0.M2].
 [lite-site-switcher-handler-urlpath]: ./lite-site-switcher-handler-urlpath
 [thorax-lumbar-client]: ./thorax-lumbar-client
 [Pull requests]: http://help.github.com/send-pull-requests
-[contributor guidelines]: https://github.com/SpringSource/spring-mobile/wiki/Contributor-Guidelines
-[screencast demonstration]: http://s3.springsource.org/MVC/spring-mobile-1.0.0.M2-screencast.mov
-[Spring Mobile 1.0.0.M2]: http://www.springsource.org/spring-mobile/news/1.0.0.m2-released
+[contributor guidelines]: https://github.com/spring-projects/spring-mobile/wiki/Contributor-Guidelines
 [Apache license]: http://www.apache.org/licenses/LICENSE-2.0
