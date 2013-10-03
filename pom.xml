@@ -8,12 +8,12 @@
 	<version>0.1.0</version>
 	<packaging>pom</packaging>
 	<name>spring-mobile-samples</name>
-	<url>http://www.springsource.org</url>
+	<url>http://www.spring.io</url>
 	<description>Demonstration of Spring Mobile's lightweight server-side device detection and site switching functionality</description>
 	<inceptionYear>2010</inceptionYear>
 	<organization>
-		<name>SpringSource</name>
-		<url>http://www.springsource.org</url>
+		<name>Spring</name>
+		<url>http://www.spring.io</url>
 	</organization>
 
 	<modules>
@@ -29,7 +29,7 @@
 
 	<properties>
 		<java-version>1.6</java-version>
-		<org.springframework-version>3.2.3.RELEASE</org.springframework-version>
+		<org.springframework-version>3.2.4.RELEASE</org.springframework-version>
 		<org.springframework.mobile-version>1.1.0.RC1</org.springframework.mobile-version>
 		<org.aspectj-version>1.6.9</org.aspectj-version>
 		<org.slf4j-version>1.6.1</org.slf4j-version>
@@ -145,8 +145,8 @@
 	<repositories>
 		<repository>
 			<id>spring-milestone</id>
-			<name>SpringSource Milestone Repository</name>
-			<url>http://repo.springsource.org/libs-milestone</url>
+			<name>Spring Milestone Repository</name>
+			<url>http://repo.spring.io/libs-milestone</url>
 		</repository>
 	</repositories>
 
