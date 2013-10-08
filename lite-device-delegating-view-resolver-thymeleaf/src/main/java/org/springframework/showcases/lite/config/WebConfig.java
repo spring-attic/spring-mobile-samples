@@ -44,25 +44,20 @@ import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 @ComponentScan(basePackages = "org.springframework.showcases.lite")
 public class WebConfig extends WebMvcConfigurerAdapter {
 
-	// implementing WebMvcConfigurer
-
-	@Override
-	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(new DeviceResolverHandlerInterceptor());
-		registry.addInterceptor(new SitePreferenceHandlerInterceptor());
+	@Bean
+	public DeviceResolverHandlerInterceptor deviceResolverHandlerInterceptor() {
+		return new DeviceResolverHandlerInterceptor();
 	}
 
-	@Override
-	public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
-		argumentResolvers.add(new SitePreferenceHandlerMethodArgumentResolver());
+	@Bean
+	public SitePreferenceHandlerInterceptor sitePreferenceHandlerInterceptor() {
+		return new SitePreferenceHandlerInterceptor();
 	}
 
-	@Override
-	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+	@Bean
+	public SitePreferenceHandlerMethodArgumentResolver sitePreferenceHandlerMethodArgumentResolver() {
+		return new SitePreferenceHandlerMethodArgumentResolver();
 	}
-
-	// additional webmvc-related beans
 
 	@Bean
 	public ServletContextTemplateResolver templateResolver() {
@@ -85,10 +80,27 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		ThymeleafViewResolver delegate = new ThymeleafViewResolver();
 		delegate.setTemplateEngine(templateEngine());
 		delegate.setOrder(1);
-		LiteDeviceDelegatingViewResolver resolver = new LiteDeviceDelegatingViewResolver(delegate);
+		LiteDeviceDelegatingViewResolver resolver = new LiteDeviceDelegatingViewResolver(
+				delegate);
 		resolver.setMobilePrefix("mobile/");
 		resolver.setTabletPrefix("tablet/");
 		return resolver;
+	}
+
+	@Override
+	public void addInterceptors(InterceptorRegistry registry) {
+		registry.addInterceptor(deviceResolverHandlerInterceptor());
+		registry.addInterceptor(sitePreferenceHandlerInterceptor());
+	}
+
+	@Override
+	public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
+		argumentResolvers.add(sitePreferenceHandlerMethodArgumentResolver());
+	}
+
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
 	}
 
 }
