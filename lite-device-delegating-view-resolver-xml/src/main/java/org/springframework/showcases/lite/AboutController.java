@@ -29,9 +29,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AboutController {
 
 	/**
-	 * Show the About page to the user.
-	 * Declares a {@link SitePreference} parameter to show how you can resolve the user's site preference.
-	 * This controller renders a different version of the about view if the user has a mobile site preference.
+	 * Show the About page to the user. Declares a {@link SitePreference} parameter to
+	 * show how you can resolve the user's site preference. This controller renders a
+	 * different version of the about view if the user has a mobile site preference.
 	 */
 	@RequestMapping("/about")
 	public String home(SitePreference sitePreference, Model model) {

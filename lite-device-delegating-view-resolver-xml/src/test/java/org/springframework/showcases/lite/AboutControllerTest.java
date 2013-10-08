@@ -32,7 +32,7 @@ public class AboutControllerTest {
 		Model model = new ExtendedModelMap();
 		assertEquals("about", controller.home(SitePreference.MOBILE, model));
 	}
-	
+
 	@Test
 	public void homePageTabletSitePreference() {
 		Model model = new ExtendedModelMap();
