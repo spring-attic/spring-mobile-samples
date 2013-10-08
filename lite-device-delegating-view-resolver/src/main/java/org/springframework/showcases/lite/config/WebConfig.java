@@ -48,21 +48,6 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		return new SitePreferenceHandlerInterceptor();
 	}
 
-	// implementing WebMvcConfigurer
-
-	@Override
-	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(deviceResolverHandlerInterceptor());
-		registry.addInterceptor(sitePreferenceHandlerInterceptor());
-	}
-
-	@Override
-	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
-	}
-
-	// additional webmvc-related beans
-
 	@Bean
 	public LiteDeviceDelegatingViewResolver liteDeviceAwareViewResolver() {
 		InternalResourceViewResolver delegate = new InternalResourceViewResolver();
@@ -73,6 +58,17 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		resolver.setMobilePrefix("mobile/");
 		resolver.setTabletPrefix("tablet/");
 		return resolver;
+	}
+
+	@Override
+	public void addInterceptors(InterceptorRegistry registry) {
+		registry.addInterceptor(deviceResolverHandlerInterceptor());
+		registry.addInterceptor(sitePreferenceHandlerInterceptor());
+	}
+
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
 	}
 
 }

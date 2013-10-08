@@ -50,7 +50,13 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		return new DeviceHandlerMethodArgumentResolver();
 	}
 
-	// implementing WebMvcConfigurer
+	@Bean
+	public InternalResourceViewResolver internalResourceViewResolver() {
+		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+		resolver.setPrefix("/WEB-INF/views/");
+		resolver.setSuffix(".jsp");
+		return resolver;
+	}
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
@@ -65,16 +71,6 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
-	}
-
-	// additional webmvc-related beans
-
-	@Bean
-	public InternalResourceViewResolver internalResourceViewResolver() {
-		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-		resolver.setPrefix("/WEB-INF/views/");
-		resolver.setSuffix(".jsp");
-		return resolver;
 	}
 
 }
