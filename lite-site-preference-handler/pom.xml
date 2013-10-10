@@ -3,14 +3,211 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>org.springframework.mobile</groupId>
-		<artifactId>spring-mobile-samples</artifactId>
-		<version>0.1.0</version>
-	</parent>
-
+	<groupId>org.springframework.mobile</groupId>
 	<artifactId>lite-site-preference-handler</artifactId>
+	<version>0.1.0</version>
 	<packaging>war</packaging>
 	<name>lite-site-preference-handler</name>
+	<url>http://www.spring.io</url>
+	<description>Demonstration of Spring Mobile's lightweight server-side device detection and site switching functionality</description>
+	<inceptionYear>2010</inceptionYear>
+	<organization>
+		<name>Spring</name>
+		<url>http://www.spring.io</url>
+	</organization>
+
+	<properties>
+		<java-version>1.6</java-version>
+		<org.springframework-version>3.2.4.RELEASE</org.springframework-version>
+		<org.springframework.mobile-version>1.1.0.RELEASE</org.springframework.mobile-version>
+		<org.aspectj-version>1.6.9</org.aspectj-version>
+		<org.slf4j-version>1.6.1</org.slf4j-version>
+		<log4j-version>1.2.16</log4j-version>
+		<javax.servlet.api-version>3.0.1</javax.servlet.api-version>
+		<javax.servlet.jsp-version>2.1</javax.servlet.jsp-version>
+		<javax.servlet.jstl-version>1.2</javax.servlet.jstl-version>
+		<junit-version>4.9</junit-version>
+		<org.apache.maven.plugins.compiler-version>3.0</org.apache.maven.plugins.compiler-version>
+		<org.apache.maven.plugins.war-version>2.3</org.apache.maven.plugins.war-version>
+		<org.codehaus.mojo.aspectj-version>1.4</org.codehaus.mojo.aspectj-version>
+		<org.codehaus.mojo.tomcat-version>1.1</org.codehaus.mojo.tomcat-version>
+	</properties>
+
+	<dependencies>
+		<!-- Spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${org.springframework-version}</version>
+			<exclusions>
+				<!-- Exclude Commons Logging in favor of SLF4j -->
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.mobile</groupId>
+			<artifactId>spring-mobile-device</artifactId>
+			<version>${org.springframework.mobile-version}</version>
+		</dependency>
+
+		<!-- CGLIB, only required and used for @Configuration usage -->
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib-nodep</artifactId>
+			<version>2.2</version>
+		</dependency>
+
+		<!-- Aspect J -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>${org.aspectj-version}</version>
+		</dependency>
+
+		<!-- @Inject -->
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1</version>
+		</dependency>
+
+		<!-- Logging -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${org.slf4j-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${org.slf4j-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${org.slf4j-version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j-version}</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- Servlet -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${javax.servlet.api-version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>${javax.servlet.jsp-version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${javax.servlet.jstl-version}</version>
+		</dependency>
+
+		<!-- Test -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit-version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>spring-repository</id>
+			<name>Spring Repository</name>
+			<url>http://repo.spring.io/libs-release</url>
+		</repository>
+	</repositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${org.apache.maven.plugins.compiler-version}</version>
+				<configuration>
+					<source>${java-version}</source>
+					<target>${java-version}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>${org.apache.maven.plugins.war-version}</version>
+				<configuration>
+					<!-- Servlet 3 wars do not require a web.xml -->
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>aspectj-maven-plugin</artifactId>
+				<version>${org.codehaus.mojo.aspectj-version}</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.aspectj</groupId>
+						<artifactId>aspectjrt</artifactId>
+						<version>${org.aspectj-version}</version>
+					</dependency>
+					<dependency>
+						<groupId>org.aspectj</groupId>
+						<artifactId>aspectjtools</artifactId>
+						<version>${org.aspectj-version}</version>
+					</dependency>
+				</dependencies>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+							<goal>test-compile</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<outxml>true</outxml>
+					<source>${java-version}</source>
+					<target>${java-version}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>install</id>
+						<phase>install</phase>
+						<goals>
+							<goal>sources</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.1</version>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
