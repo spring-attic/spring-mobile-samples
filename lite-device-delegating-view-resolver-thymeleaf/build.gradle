@@ -13,7 +13,7 @@ apply plugin: "idea"
 apply plugin: "war"
 apply plugin: "tomcat"
 
-ext.springVersion =       "3.2.4.RELEASE"
+ext.springVersion =       "3.2.6.RELEASE"
 ext.springMobileVersion = "1.1.0.RELEASE"
 ext.thymeleafVersion =    "2.0.19"
 ext.aspectJVersion =      "1.6.9"
