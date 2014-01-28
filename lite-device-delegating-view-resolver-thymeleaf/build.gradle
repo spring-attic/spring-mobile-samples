@@ -4,30 +4,30 @@ buildscript {
 	}
 
 	dependencies {
-		classpath 'org.gradle.api.plugins:gradle-tomcat-plugin:0.9.9'
+		classpath "org.gradle.api.plugins:gradle-tomcat-plugin:0.9.9"
 	}
 }
 
-apply plugin: 'eclipse'
-apply plugin: 'idea'
-apply plugin: 'war'
-apply plugin: 'tomcat'
+apply plugin: "eclipse"
+apply plugin: "idea"
+apply plugin: "war"
+apply plugin: "tomcat"
 
-ext.springVersion =       '3.2.4.RELEASE'
-ext.springMobileVersion = '1.1.0.RELEASE'
-ext.thymeleafVersion =    '2.0.19'
-ext.aspectJVersion =      '1.6.9'
-ext.cglibVersion =        '2.2'
-ext.slf4jVersion =        '1.6.1'
-ext.servletJstlVersion =  '1.2'
-ext.servletApiVersion =   '3.0.1'
-ext.servletJspVersion =   '2.1'
-ext.junitVersion =        '4.9'
-ext.tomcatVersion =       '7.0.42'
+ext.springVersion =       "3.2.4.RELEASE"
+ext.springMobileVersion = "1.1.0.RELEASE"
+ext.thymeleafVersion =    "2.0.19"
+ext.aspectJVersion =      "1.6.9"
+ext.cglibVersion =        "2.2"
+ext.slf4jVersion =        "1.6.1"
+ext.servletJstlVersion =  "1.2"
+ext.servletApiVersion =   "3.0.1"
+ext.servletJspVersion =   "2.1"
+ext.junitVersion =        "4.9"
+ext.tomcatVersion =       "7.0.42"
 
 dependencies {
 	compile("org.springframework:spring-context:$springVersion") {
-		exclude module: 'commons-logging'
+		exclude module: "commons-logging"
 	}
 	compile("org.springframework:spring-webmvc:$springVersion")
 	compile("org.springframework.mobile:spring-mobile-device:$springMobileVersion")
@@ -45,15 +45,15 @@ dependencies {
 	tomcat("org.apache.tomcat.embed:tomcat-embed-core:$tomcatVersion",
 		   "org.apache.tomcat.embed:tomcat-embed-logging-juli:$tomcatVersion")
 	tomcat("org.apache.tomcat.embed:tomcat-embed-jasper:$tomcatVersion") {
-		exclude group: 'org.eclipse.jdt.core.compiler', module: 'ecj'
+		exclude group: "org.eclipse.jdt.core.compiler", module: "ecj"
 	}
 }
 
 repositories {
 	mavenCentral()
-	maven { url 'http://repo.spring.io/libs-release' }
+	maven { url "http://repo.spring.io/libs-release" }
 }
 
 task wrapper(type: Wrapper) {
-	gradleVersion = '1.8'
+	gradleVersion = "1.8"
 }

@@ -1,28 +1,28 @@
-apply plugin: 'eclipse'
-apply plugin: 'war'
-apply plugin: 'eclipse-wtp'
-apply plugin: 'tomcat'
+apply plugin: "eclipse"
+apply plugin: "war"
+apply plugin: "eclipse-wtp"
+apply plugin: "tomcat"
 
-aspectJVersion = '1.6.9'
-hibernateValidatorVersion = '4.2.0.Final'
-jacksonVersion = '1.9.9'
-mockitoVersion = '1.8.5'
-neo4jVersion = '1.6.3'
-springDataNeo4jVersion = '2.0.1.RELEASE'
-springMobileVersion = '1.0.0.RELEASE'
-springVersion = '3.1.2.RELEASE'
-tomcatVersion = '7.0.11'
+aspectJVersion = "1.6.9"
+hibernateValidatorVersion = "4.2.0.Final"
+jacksonVersion = "1.9.9"
+mockitoVersion = "1.8.5"
+neo4jVersion = "1.6.3"
+springDataNeo4jVersion = "2.0.1.RELEASE"
+springMobileVersion = "1.0.0.RELEASE"
+springVersion = "3.1.2.RELEASE"
+tomcatVersion = "7.0.11"
 
 configurations {
-    all*.exclude group: 'javax.mail'
-    all*.exclude group: 'javax.jms'
-    all*.exclude group: 'com.sun.jdmk'
-    all*.exclude group: 'com.sun.jmx'
+    all*.exclude group: "javax.mail"
+    all*.exclude group: "javax.jms"
+    all*.exclude group: "com.sun.jdmk"
+    all*.exclude group: "com.sun.jmx"
 }
 
 dependencies {
 	compile ("org.springframework:spring-context:$springVersion") {
-		exclude module: 'commons-logging'
+		exclude module: "commons-logging"
 	}
     compile "org.springframework:spring-aspects:$springVersion"
     compile "org.springframework:spring-beans:$springVersion"
@@ -31,7 +31,7 @@ dependencies {
 	compile "org.springframework:spring-tx:$springVersion"
 	compile "org.springframework.mobile:spring-mobile-device:$springMobileVersion"
 	compile ("org.springframework.data:spring-data-neo4j:$springDataNeo4jVersion") {
-	   exclude group: 'org.springframework'
+	   exclude group: "org.springframework"
 	}
 	compile "org.neo4j:neo4j:$neo4jVersion"
     compile "org.neo4j:neo4j-cypher:$neo4jVersion"
@@ -51,21 +51,21 @@ dependencies {
     tomcat "org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}",
          "org.apache.tomcat.embed:tomcat-embed-logging-juli:${tomcatVersion}"
     tomcat("org.apache.tomcat.embed:tomcat-embed-jasper:${tomcatVersion}") {
-      exclude group: 'org.eclipse.jdt.core.compiler', module: 'ecj'
+      exclude group: "org.eclipse.jdt.core.compiler", module: "ecj"
   }
 
 }
 
 repositories {
-	mavenRepo urls: 'http://maven.springframework.org/release'
-	mavenRepo urls: 'http://maven.springframework.org/milestone'
-	mavenRepo urls: 'http://maven.springframework.org/snapshot'
-	mavenRepo urls: 'http://download.java.net/maven/2'
+	mavenRepo urls: "http://maven.springframework.org/release"
+	mavenRepo urls: "http://maven.springframework.org/milestone"
+	mavenRepo urls: "http://maven.springframework.org/snapshot"
+	mavenRepo urls: "http://download.java.net/maven/2"
 	mavenCentral()
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '1.1'
+    gradleVersion = "1.1"
 }
 
 task lumbar(type: Exec) {
@@ -82,23 +82,23 @@ war.dependsOn { lumbar }
 
 tomcatRun.dependsOn { lumbar }
 tomcatRun {
-    contextPath = 'thorax-client'
+    contextPath = "thorax-client"
 }
 
 tomcatRunWar.dependsOn { lumbar }
 tomcatRunWar {
-    contextPath = 'thorax-client'
+    contextPath = "thorax-client"
 }
 
 buildscript {
     repositories {
         add(new org.apache.ivy.plugins.resolver.URLResolver()) {
-            name = 'GitHub'
-            addArtifactPattern 'http://cloud.github.com/downloads/[organisation]/[module]/[module]-[revision].[ext]'
+            name = "GitHub"
+            addArtifactPattern "http://cloud.github.com/downloads/[organisation]/[module]/[module]-[revision].[ext]"
         }
     }
 
     dependencies {
-        classpath 'bmuschko:gradle-tomcat-plugin:0.9.5'
+        classpath "bmuschko:gradle-tomcat-plugin:0.9.5"
     }
 }
