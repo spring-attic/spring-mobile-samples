@@ -23,7 +23,7 @@ ext.servletJstlVersion =  "1.2"
 ext.servletApiVersion =   "3.0.1"
 ext.servletJspVersion =   "2.1"
 ext.junitVersion =        "4.9"
-ext.tomcatVersion =       "7.0.42"
+ext.tomcatVersion =       "7.0.50"
 
 dependencies {
 	compile("org.springframework:spring-context:$springVersion") {
