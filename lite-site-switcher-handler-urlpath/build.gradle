@@ -16,7 +16,7 @@ apply plugin: "tomcat"
 sourceCompatibility=1.5
 targetCompatibility=1.5
 
-ext.springVersion =       "3.2.6.RELEASE"
+ext.springVersion =       "4.0.1.RELEASE"
 ext.springMobileVersion = "1.1.0.RELEASE"
 ext.aspectJVersion =      "1.6.9"
 ext.cglibVersion =        "2.2"
