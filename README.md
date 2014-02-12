@@ -1,6 +1,6 @@
 # Spring Mobile Samples
 
-[Spring Mobile] is an extension to the popular web framework [Spring Web MVC], that aims to simplify the development of mobile web applications. This repository contains sample projects illustrating usage of Spring Mobile. See [Spring Mobile on GitHub] for more information about building from source.
+[Spring Mobile] is an extension to the popular [Spring Web MVC] web framework , that aims to simplify the development of mobile web applications. This repository contains sample projects illustrating usage of Spring Mobile. See [Spring Mobile on GitHub] for more information about building from source.
 
 
 ## Sample Applications
@@ -17,10 +17,26 @@ The following sample applications demonstrate the capabilities of [Spring Mobile
  - [lite-site-switcher-handler-urlpath] - combines all features of Spring Mobile to showcase the use of the 'urlPath' site switching strategy
  - [thorax-lumbar-client] - showcases the use of Spring Mobile with JavaScript libraries
 
+## Build and Deploy with Gradle
 
-## Build and Deploy
+Most of the sample apps can be built and run using the following Gradle commands from within the sample's folder.
 
-Most of the sample apps can be built and run using the following commands from within the sample's folder.
+1. Build the app:
+
+    ```sh
+    $ ./gradlew build
+    ```
+
+2. Deploy the .war to a Servlet 3 ServletContainer using Gradle:
+
+    ```sh
+    $ ./gradlew tomcatRun
+    ```
+
+
+## Build and Deploy with Maven
+
+Maven configurations are also available for most of the sample apps.
 
 1. Build the app:
 
@@ -33,8 +49,6 @@ Most of the sample apps can be built and run using the following commands from w
     ```sh
     $ mvn tomcat7:run
     ```
-
-    > **Note**: you may also import the project into your IDE and deploy to a Servlet 3 container such as Tomcat 7.
 
 
 ## Contribute
