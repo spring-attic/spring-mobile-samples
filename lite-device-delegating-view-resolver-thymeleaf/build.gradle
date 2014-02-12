@@ -13,8 +13,8 @@ apply plugin: "idea"
 apply plugin: "war"
 apply plugin: "tomcat"
 
-sourceCompatibility=1.5
-targetCompatibility=1.5
+sourceCompatibility=1.6
+targetCompatibility=1.6
 
 ext.springVersion =       "4.0.1.RELEASE"
 ext.springMobileVersion = "1.1.0.RELEASE"
