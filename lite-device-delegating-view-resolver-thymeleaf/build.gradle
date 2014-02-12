@@ -13,6 +13,9 @@ apply plugin: "idea"
 apply plugin: "war"
 apply plugin: "tomcat"
 
+sourceCompatibility=1.5
+targetCompatibility=1.5
+
 ext.springVersion =       "3.2.6.RELEASE"
 ext.springMobileVersion = "1.1.0.RELEASE"
 ext.thymeleafVersion =    "2.0.19"
