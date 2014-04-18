@@ -12,6 +12,7 @@ function build {
 build lite-device-delegating-view-resolver-jc
 build lite-device-delegating-view-resolver-jc-thymeleaf
 build lite-device-delegating-view-resolver-xml
+build lite-device-resolver
 build lite-device-resolver-jc
 build lite-device-resolver-xml
 build lite-site-preference-handler-jc

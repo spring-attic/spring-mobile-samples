@@ -12,8 +12,9 @@ The following sample applications demonstrate the capabilities of [Spring Mobile
  - [lite-device-delegating-view-resolver-jc] - example showing view names adjusted based on device
  - [lite-device-delegating-view-resolver-xml] - example using XML based configuration, showing view names adjusted based on device 
  - [lite-device-delegating-view-resolver-jc-thymeleaf] - example showing view names adjusted based on device, integrated with Thymeleaf for view resolution
- - [lite-device-resolver-jc] - illustrates DeviceResolver functionality and usage 
- - [lite-device-resolver-xml] - example using XML based configuration, illustrates DeviceResolver functionality and usage
+ - [lite-device-resolver] - Spring Boot application that illustrates DeviceResolver functionality and usage 
+ - [lite-device-resolver-jc] - example using Java-based configuration
+ - [lite-device-resolver-xml] - example using XML based configuration
  - [lite-site-preference-handler-jc] - illustrates SitePreferenceHandler functionality
  - [lite-site-switcher-handler-jc-mdot] - illustrates SiteSwitcherHandler functionality using the 'mDot' strategy
  - [lite-site-switcher-handler-jc-urlpath] - combines all features of Spring Mobile to showcase the use of the 'urlPath' site switching strategy
@@ -69,6 +70,7 @@ Maven configurations are also available for most of the sample apps.
 [lite-device-delegating-view-resolver-jc]: ./lite-device-delegating-view-resolver-jc
 [lite-device-delegating-view-resolver-jc-thymeleaf]: ./lite-device-delegating-view-resolver-jc-thymeleaf
 [lite-device-delegating-view-resolver-xml]: ./lite-device-delegating-view-resolver-xml
+[lite-device-resolver]: ./lite-device-resolver
 [lite-device-resolver-jc]: ./lite-device-resolver-jc
 [lite-device-resolver-xml]: ./lite-device-resolver-xml
 [lite-site-preference-handler-jc]: ./lite-site-preference-handler-jc
