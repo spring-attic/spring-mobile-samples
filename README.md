@@ -2,7 +2,7 @@
 
 [!["Build Status"](https://build.spring.io/plugins/servlet/buildStatusImage/MOBILE-SAMPLES)](https://build.spring.io/browse/MOBILE-SAMPLES)
 
-[Spring Mobile] is an extension to the popular [Spring Web MVC] web framework , that aims to simplify the development of mobile web applications. This repository contains sample projects illustrating usage of Spring Mobile. See [Spring Mobile on GitHub] for more information about building from source.
+[Spring Mobile] is an extension to the popular [Spring Web MVC] web framework that aims to simplify the development of mobile web applications. This repository contains sample projects illustrating usage of Spring Mobile. See [Spring Mobile on GitHub] for more information about building from source.
 
 
 ## Sample Applications
