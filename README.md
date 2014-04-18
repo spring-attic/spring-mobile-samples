@@ -9,15 +9,15 @@
 
 The following sample applications demonstrate the capabilities of [Spring Mobile] for server-side device detection and handling. See the README within each sample project for more information and additional instructions.
 
- - [lite-device-delegating-view-resolver] - example showing view names adjusted based on device
+ - [lite-device-delegating-view-resolver-jc] - example showing view names adjusted based on device
  - [lite-device-delegating-view-resolver-xml] - example using XML based configuration, showing view names adjusted based on device 
- - [lite-device-delegating-view-resolver-thymeleaf] - example showing view names adjusted based on device, integrated with Thymeleaf for view resolution
- - [lite-device-resolver] - illustrates DeviceResolver functionality and usage 
+ - [lite-device-delegating-view-resolver-jc-thymeleaf] - example showing view names adjusted based on device, integrated with Thymeleaf for view resolution
+ - [lite-device-resolver-jc] - illustrates DeviceResolver functionality and usage 
  - [lite-device-resolver-xml] - example using XML based configuration, illustrates DeviceResolver functionality and usage
- - [lite-site-preference-handler] - illustrates SitePreferenceHandler functionality
- - [lite-site-switcher-handler-mdot] - illustrates SiteSwitcherHandler functionality using the 'mDot' strategy
- - [lite-site-switcher-handler-urlpath] - combines all features of Spring Mobile to showcase the use of the 'urlPath' site switching strategy
- - [thorax-lumbar-client] - showcases the use of Spring Mobile with JavaScript libraries
+ - [lite-site-preference-handler-jc] - illustrates SitePreferenceHandler functionality
+ - [lite-site-switcher-handler-jc-mdot] - illustrates SiteSwitcherHandler functionality using the 'mDot' strategy
+ - [lite-site-switcher-handler-jc-urlpath] - combines all features of Spring Mobile to showcase the use of the 'urlPath' site switching strategy
+
 
 ## Build and Deploy with Gradle
 
@@ -66,14 +66,14 @@ Maven configurations are also available for most of the sample apps.
 [Spring Mobile]: http://projects.spring.io/spring-mobile
 [Spring Web MVC]: http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html
 [Spring Mobile on GitHub]: https://github.com/spring-projects/spring-mobile
-[lite-device-delegating-view-resolver]: ./lite-device-delegating-view-resolver
-[lite-device-delegating-view-resolver-thymeleaf]: ./lite-device-delegating-view-resolver-thymeleaf
+[lite-device-delegating-view-resolver-jc]: ./lite-device-delegating-view-resolver-jc
+[lite-device-delegating-view-resolver-jc-thymeleaf]: ./lite-device-delegating-view-resolver-jc-thymeleaf
 [lite-device-delegating-view-resolver-xml]: ./lite-device-delegating-view-resolver-xml
-[lite-device-resolver]: ./lite-device-resolver
+[lite-device-resolver-jc]: ./lite-device-resolver-jc
 [lite-device-resolver-xml]: ./lite-device-resolver-xml
-[lite-site-preference-handler]: ./lite-site-preference-handler
-[lite-site-switcher-handler-mdot]: ./lite-site-switcher-handler-mdot
-[lite-site-switcher-handler-urlpath]: ./lite-site-switcher-handler-urlpath
+[lite-site-preference-handler-jc]: ./lite-site-preference-handler-jc
+[lite-site-switcher-handler-jc-mdot]: ./lite-site-switcher-handler-jc-mdot
+[lite-site-switcher-handler-jc-urlpath]: ./lite-site-switcher-handler-jc-urlpath
 [thorax-lumbar-client]: ./thorax-lumbar-client
 [Pull requests]: http://help.github.com/send-pull-requests
 [contributor guidelines]: https://github.com/spring-projects/spring-mobile/wiki/Contributor-Guidelines

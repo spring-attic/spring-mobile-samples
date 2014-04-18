@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.springframework.mobile</groupId>
-	<artifactId>lite-device-delegating-view-resolver</artifactId>
+	<artifactId>lite-site-switcher-handler-jc-urlpath</artifactId>
 	<version>0.1.0</version>
 	<packaging>war</packaging>
-	<name>lite-device-delegating-view-resolver</name>
+	<name>lite-site-switcher-handler-jc-urlpath</name>
 	<url>http://www.spring.io</url>
 	<description>Demonstration of Spring Mobile's lightweight server-side device detection and site switching functionality</description>
 	<inceptionYear>2010</inceptionYear>

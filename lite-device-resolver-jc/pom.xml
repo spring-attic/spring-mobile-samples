@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.springframework.mobile</groupId>
-	<artifactId>lite-site-preference-handler</artifactId>
+	<artifactId>lite-device-resolver-jc</artifactId>
 	<version>0.1.0</version>
 	<packaging>war</packaging>
-	<name>lite-site-preference-handler</name>
+	<name>lite-device-resolver-jc</name>
 	<url>http://www.spring.io</url>
 	<description>Demonstration of Spring Mobile's lightweight server-side device detection and site switching functionality</description>
 	<inceptionYear>2010</inceptionYear>

@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.springframework.mobile</groupId>
-	<artifactId>lite-device-resolver</artifactId>
+	<artifactId>lite-device-delegating-view-resolver-jc-thymeleaf</artifactId>
 	<version>0.1.0</version>
 	<packaging>war</packaging>
-	<name>lite-device-resolver</name>
+	<name>lite-device-delegating-view-resolver-jc-thymeleaf</name>
 	<url>http://www.spring.io</url>
 	<description>Demonstration of Spring Mobile's lightweight server-side device detection and site switching functionality</description>
 	<inceptionYear>2010</inceptionYear>
@@ -59,6 +59,13 @@
 			<groupId>org.springframework.mobile</groupId>
 			<artifactId>spring-mobile-device</artifactId>
 			<version>${org.springframework.mobile-version}</version>
+		</dependency>
+
+		<!-- Thymeleaf -->
+		<dependency>
+			<groupId>org.thymeleaf</groupId>
+			<artifactId>thymeleaf-spring3</artifactId>
+			<version>2.0.19</version>
 		</dependency>
 
 		<!-- CGLIB, only required and used for @Configuration usage -->
