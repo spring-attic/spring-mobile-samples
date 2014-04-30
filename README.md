@@ -39,7 +39,7 @@ Most of the sample apps can be built and run using the following Gradle commands
 
 ## Build and Deploy with Maven
 
-Maven configurations are also available for most of the sample apps.
+Maven configurations are also available for many of the sample apps.
 
 1. Build the app:
 
@@ -78,5 +78,5 @@ Maven configurations are also available for most of the sample apps.
 [lite-site-switcher-handler-jc-urlpath]: ./lite-site-switcher-handler-jc-urlpath
 [thorax-lumbar-client]: ./thorax-lumbar-client
 [Pull requests]: http://help.github.com/send-pull-requests
-[contributor guidelines]: https://github.com/spring-projects/spring-mobile/wiki/Contributor-Guidelines
+[contributor guidelines]: CONTRIBUTING.md
 [Apache license]: http://www.apache.org/licenses/LICENSE-2.0
