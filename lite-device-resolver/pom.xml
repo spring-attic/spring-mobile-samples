@@ -44,9 +44,6 @@
 
 	<build>
 		<plugins>
-			<plugin> 
-				<artifactId>maven-compiler-plugin</artifactId> 
-			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -56,16 +53,14 @@
 
 	<repositories>
 		<repository>
-			<id>spring-release</id>
-			<name>Spring Release Repository</name>
+			<id>spring-releases</id>
 			<url>http://repo.spring.io/libs-release</url>
 		</repository>
 	</repositories>
 	
 	<pluginRepositories>
 		<pluginRepository>
-			<id>spring-release</id>
-			<name>Spring Release Repository</name>
+			<id>spring-releases</id>
 			<url>http://repo.spring.io/libs-release</url>
 		</pluginRepository>
 	</pluginRepositories>
