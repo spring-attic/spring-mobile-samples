@@ -15,6 +15,7 @@ The following sample applications demonstrate the capabilities of [Spring Mobile
  - [lite-device-resolver] - Spring Boot application that illustrates DeviceResolver functionality and usage 
  - [lite-device-resolver-jc] - example using Java-based configuration
  - [lite-device-resolver-xml] - example using XML based configuration
+ - [lite-site-preference-handler] - illustrates SitePreferenceHandler functionality
  - [lite-site-preference-handler-jc] - illustrates SitePreferenceHandler functionality
  - [lite-site-switcher-handler-jc-mdot] - illustrates SiteSwitcherHandler functionality using the 'mDot' strategy
  - [lite-site-switcher-handler-jc-urlpath] - combines all features of Spring Mobile to showcase the use of the 'urlPath' site switching strategy
@@ -73,6 +74,7 @@ Maven configurations are also available for many of the sample apps.
 [lite-device-resolver]: ./lite-device-resolver
 [lite-device-resolver-jc]: ./lite-device-resolver-jc
 [lite-device-resolver-xml]: ./lite-device-resolver-xml
+[lite-site-preference-handler]: ./lite-site-preference-handler
 [lite-site-preference-handler-jc]: ./lite-site-preference-handler-jc
 [lite-site-switcher-handler-jc-mdot]: ./lite-site-switcher-handler-jc-mdot
 [lite-site-switcher-handler-jc-urlpath]: ./lite-site-switcher-handler-jc-urlpath
