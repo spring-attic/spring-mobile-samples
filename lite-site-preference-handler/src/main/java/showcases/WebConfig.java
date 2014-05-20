@@ -18,6 +18,8 @@ package showcases;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.mobile.DeviceResolverAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mobile.device.DeviceHandlerMethodArgumentResolver;
@@ -34,22 +36,24 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  * @see WebMvcConfigurer
  */
 @Configuration
-public class SitePreferenceConfiguration extends WebMvcConfigurerAdapter {
+public class WebConfig extends WebMvcConfigurerAdapter {
 
-	@Bean
-	public DeviceResolverHandlerInterceptor deviceResolverHandlerInterceptor() {
-		return new DeviceResolverHandlerInterceptor();
-	}
+	/**
+	 * Configured in Spring Boot's {@link DeviceResolverAutoConfiguration}
+	 */
+	@Autowired
+	public DeviceResolverHandlerInterceptor deviceResolverHandlerInterceptor;
 
 	@Bean
 	public SitePreferenceHandlerInterceptor sitePreferenceHandlerInterceptor() {
 		return new SitePreferenceHandlerInterceptor();
 	}
 
-	@Bean
-	public DeviceHandlerMethodArgumentResolver deviceHandlerMethodArgumentResolver() {
-		return new DeviceHandlerMethodArgumentResolver();
-	}
+	/**
+	 * Configured in Spring Boot's {@link DeviceResolverAutoConfiguration}
+	 */
+	@Autowired
+	public DeviceHandlerMethodArgumentResolver deviceHandlerMethodArgumentResolver;
 
 	@Bean
 	public SitePreferenceHandlerMethodArgumentResolver sitePreferenceHandlerMethodArgumentResolver() {
@@ -64,7 +68,7 @@ public class SitePreferenceConfiguration extends WebMvcConfigurerAdapter {
 		 * is not required for site preference management. However for this sample
 		 * application, it's useful to see what device is being resolved.
 		 */
-		registry.addInterceptor(deviceResolverHandlerInterceptor());
+		registry.addInterceptor(deviceResolverHandlerInterceptor);
 
 		/*
 		 * Include the handler for site preference management. This handler defaults to
@@ -82,7 +86,7 @@ public class SitePreferenceConfiguration extends WebMvcConfigurerAdapter {
 		 * required for site preference management. However for this sample application,
 		 * it's useful to see what device is being resolved.
 		 */
-		argumentResolvers.add(deviceHandlerMethodArgumentResolver());
+		argumentResolvers.add(deviceHandlerMethodArgumentResolver);
 
 		/*
 		 * Include the argument resolver that supports accessing the current site
