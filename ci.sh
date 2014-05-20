@@ -9,6 +9,7 @@ function build {
     fi
 }
 
+build lite-device-delegating-view-resolver
 build lite-device-delegating-view-resolver-jc
 build lite-device-delegating-view-resolver-jc-thymeleaf
 build lite-device-delegating-view-resolver-xml
