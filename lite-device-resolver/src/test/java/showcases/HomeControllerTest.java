@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package hello;
+package showcases;
 
 import static org.junit.Assert.assertEquals;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package hello;
+package showcases;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.SpringApplication;

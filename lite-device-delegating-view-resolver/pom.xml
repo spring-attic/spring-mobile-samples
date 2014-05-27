@@ -10,7 +10,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.0.2.RELEASE</version>
+		<version>1.1.0.M2</version>
 	</parent>
 
 	<dependencies>
@@ -36,10 +36,15 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<properties>
-		<start-class>hello.Application</start-class>
+		<start-class>showcases.Application</start-class>
 	</properties>
 
 	<build>
@@ -53,15 +58,15 @@
 
 	<repositories>
 		<repository>
-			<id>spring-releases</id>
-			<url>http://repo.spring.io/libs-release</url>
+			<id>spring-milestones</id>
+			<url>http://repo.spring.io/libs-milestone</url>
 		</repository>
 	</repositories>
 	
 	<pluginRepositories>
 		<pluginRepository>
-			<id>spring-releases</id>
-			<url>http://repo.spring.io/libs-release</url>
+			<id>spring-milestones</id>
+			<url>http://repo.spring.io/libs-milestone</url>
 		</pluginRepository>
 	</pluginRepositories>
 

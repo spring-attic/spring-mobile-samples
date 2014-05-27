@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package hello;
+package showcases;
 
 import org.springframework.mobile.device.Device;
 import org.springframework.mobile.device.DeviceType;

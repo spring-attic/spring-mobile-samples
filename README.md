@@ -9,6 +9,7 @@
 
 The following sample applications demonstrate the capabilities of [Spring Mobile] for server-side device detection and handling. See the README within each sample project for more information and additional instructions.
 
+ - [lite-device-delegating-view-resolver] - example showing view names adjusted based on device
  - [lite-device-delegating-view-resolver-jc] - example showing view names adjusted based on device
  - [lite-device-delegating-view-resolver-xml] - example using XML based configuration, showing view names adjusted based on device 
  - [lite-device-delegating-view-resolver-jc-thymeleaf] - example showing view names adjusted based on device, integrated with Thymeleaf for view resolution
@@ -68,6 +69,7 @@ Maven configurations are also available for many of the sample apps.
 [Spring Mobile]: http://projects.spring.io/spring-mobile
 [Spring Web MVC]: http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html
 [Spring Mobile on GitHub]: https://github.com/spring-projects/spring-mobile
+[lite-device-delegating-view-resolver]: ./lite-device-delegating-view-resolver
 [lite-device-delegating-view-resolver-jc]: ./lite-device-delegating-view-resolver-jc
 [lite-device-delegating-view-resolver-jc-thymeleaf]: ./lite-device-delegating-view-resolver-jc-thymeleaf
 [lite-device-delegating-view-resolver-xml]: ./lite-device-delegating-view-resolver-xml

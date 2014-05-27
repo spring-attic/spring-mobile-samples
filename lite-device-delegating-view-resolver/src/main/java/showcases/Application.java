@@ -16,16 +16,34 @@
 
 package showcases;
 
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.mobile.device.view.LiteDeviceDelegatingViewResolver;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+/**
+ * @author Roy Clarkson
+ */
 @EnableAutoConfiguration
 @ComponentScan
 public class Application {
 
+	@Autowired
+	public InternalResourceViewResolver internalResourceViewResolver;
+
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
+	}
+
+	@Bean
+	public LiteDeviceDelegatingViewResolver liteDeviceAwareViewResolver() {
+		LiteDeviceDelegatingViewResolver resolver = new LiteDeviceDelegatingViewResolver(internalResourceViewResolver);
+		resolver.setMobilePrefix("mobile/");
+		resolver.setTabletPrefix("tablet/");
+		return resolver;
 	}
 
 }
