@@ -16,7 +16,7 @@ apply plugin: "tomcat"
 sourceCompatibility=1.6
 targetCompatibility=1.6
 
-ext.springVersion =       "4.0.4.RELEASE"
+ext.springVersion =       "4.0.5.RELEASE"
 ext.springMobileVersion = "1.1.1.RELEASE"
 ext.thymeleafVersion =    "2.0.19"
 ext.aspectJVersion =      "1.6.9"
@@ -26,7 +26,7 @@ ext.servletJstlVersion =  "1.2"
 ext.servletApiVersion =   "3.0.1"
 ext.servletJspVersion =   "2.1"
 ext.junitVersion =        "4.11"
-ext.tomcatVersion =       "7.0.50"
+ext.tomcatVersion =       "7.0.53"
 
 dependencies {
 	compile("org.springframework:spring-context:$springVersion") {
