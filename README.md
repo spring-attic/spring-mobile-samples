@@ -10,17 +10,14 @@
 The following sample applications demonstrate the capabilities of [Spring Mobile] for server-side device detection and handling. See the README within each sample project for more information and additional instructions.
 
  - [lite-device-delegating-view-resolver] - example showing view names adjusted based on device
- - [lite-device-delegating-view-resolver-jc] - example showing view names adjusted based on device
- - [lite-device-delegating-view-resolver-xml] - example using XML based configuration, showing view names adjusted based on device 
- - [lite-device-delegating-view-resolver-jc-thymeleaf] - example showing view names adjusted based on device, integrated with Thymeleaf for view resolution
- - [lite-device-resolver] - Spring Boot application that illustrates DeviceResolver functionality and usage 
- - [lite-device-resolver-jc] - example using Java-based configuration
- - [lite-device-resolver-xml] - example using XML based configuration
- - [lite-site-preference-handler] - illustrates SitePreferenceHandler functionality
- - [lite-site-preference-handler-jc] - illustrates SitePreferenceHandler functionality
- - [lite-site-switcher-handler-jc-mdot] - illustrates SiteSwitcherHandler functionality using the 'mDot' strategy
- - [lite-site-switcher-handler-jc-urlpath] - combines all features of Spring Mobile to showcase the use of the 'urlPath' site switching strategy
+ - [lite-device-resolver] - DeviceResolver functionality and usage 
+ - [lite-site-preference-handler] - SitePreferenceHandler functionality
 
+ 
+## Archived Sample Applications
+
+There are several sample applications that illustrate Java or XML based configuration that have been archived, as Spring Boot is now the preferred way of building and configuring a Spring application. These sample apps have been moved to the `archive` folder.
+ 
 
 ## Contribute
 
