@@ -10,15 +10,15 @@ function build {
 }
 
 build lite-device-delegating-view-resolver
-build lite-device-delegating-view-resolver-jc
-build lite-device-delegating-view-resolver-jc-thymeleaf
-build lite-device-delegating-view-resolver-xml
+build archive/java-configuration/lite-device-delegating-view-resolver-jc
+build archive/java-configuration/lite-device-delegating-view-resolver-jc-thymeleaf
+build archive/xml-configuration/lite-device-delegating-view-resolver-xml
 build lite-device-resolver
-build lite-device-resolver-jc
-build lite-device-resolver-xml
+build archive/java-configuration/lite-device-resolver-jc
+build archive/xml-configuration/lite-device-resolver-xml
 build lite-site-preference-handler
-build lite-site-preference-handler-jc
-build lite-site-switcher-handler-jc-mdot
-build lite-site-switcher-handler-jc-urlpath
+build archive/java-configuration/lite-site-preference-handler-jc
+build archive/java-configuration/lite-site-switcher-handler-jc-mdot
+build archive/java-configuration/lite-site-switcher-handler-jc-urlpath
 
 exit
