@@ -22,40 +22,6 @@ The following sample applications demonstrate the capabilities of [Spring Mobile
  - [lite-site-switcher-handler-jc-urlpath] - combines all features of Spring Mobile to showcase the use of the 'urlPath' site switching strategy
 
 
-## Build and Deploy with Gradle
-
-Most of the sample apps can be built and run using the following Gradle commands from within the sample's folder.
-
-1. Build the app:
-
-    ```sh
-    $ ./gradlew build
-    ```
-
-2. Deploy the .war to a Servlet 3 ServletContainer using Gradle:
-
-    ```sh
-    $ ./gradlew tomcatRun
-    ```
-
-
-## Build and Deploy with Maven
-
-Maven configurations are also available for many of the sample apps.
-
-1. Build the app:
-
-    ```sh
-    $ mvn clean package
-    ```
-
-2. Deploy the .war to a Servlet 3 ServletContainer using Maven:
-
-    ```sh
-    $ mvn tomcat7:run
-    ```
-
-
 ## Contribute
 
 [Pull requests] are welcome. See the [contributor guidelines] for details.
