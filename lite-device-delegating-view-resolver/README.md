@@ -3,7 +3,7 @@
 A [Spring Mobile] sample application demonstrating many of the capabilities of the Spring Mobile Device module, including:
 
 * "Lite" device resolution through the use of DeviceResolverHandlerInterceptor 
-* Site preference management via via SitePreferenceHandlerInterceptor
+* Site preference management via SitePreferenceHandlerInterceptor
 * View resolution with LiteDeviceDelegatingViewResolver
 * Spring Boot autoconfiguration
 

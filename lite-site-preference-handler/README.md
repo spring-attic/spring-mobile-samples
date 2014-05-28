@@ -1,6 +1,11 @@
 # lite-site-preference-handler
 
-A [Spring Mobile] sample application demonstrating the Site Preference capabilities of the Spring Mobile Device module.
+A [Spring Mobile] sample application demonstrating many of the capabilities of the Spring Mobile Device module, including:
+
+* "Lite" device resolution through the use of DeviceResolverHandlerInterceptor 
+* Site preference management via SitePreferenceHandlerInterceptor
+* JSP views
+* Spring Boot autoconfiguration
 
 
 ## Build and Deploy
@@ -10,6 +15,7 @@ A [Spring Mobile] sample application demonstrating the Site Preference capabilit
     ```sh
     $ ./gradlew build
     ```
+
     Or Maven:
 
     ```sh

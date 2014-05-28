@@ -1,15 +1,44 @@
-# lite-site-preference-handler
+# lite-site-preference-handler-jc
 
-A [Spring Mobile] sample application demonstrating the Site Preference capabilities of the Spring Mobile Device module.
+A [Spring Mobile] sample application demonstrating many of the capabilities of the Spring Mobile Device module, including:
+
+* "Lite" device resolution through the use of DeviceResolverHandlerInterceptor 
+* Site preference management via SitePreferenceHandlerInterceptor
+* JSP views
+* Java-based configuration
 
 
 ## Build and Deploy
 
-1. See the main [README](../README.md) for build instructions.
+1. Build with Gradle:
 
-2. Access the sample application at the following URL:
+    ```sh
+    $ ./gradlew build
+    ```
 
-    [http://localhost:8080/lite-site-preference-handler][app-url]
+    Or Maven:
+
+    ```sh
+    $ mvn clean package
+    ```
+
+2. Deploy the .war to a Servlet 3 ServletContainer using Gradle:
+
+    ```sh
+    $ ./gradlew tomcatRun
+    ```
+
+    Or Maven:
+
+    ```sh
+    $ mvn tomcat7:run
+    ```
+
+3. View the sample application at the following URL:
+
+    [http://localhost:8080/lite-site-preference-handler-jc]()
+
+    > **Note**: access the site from your browser, Android emulator or iOS simulator to demonstrate the functionality.
 
 
 ## License
@@ -17,6 +46,5 @@ A [Spring Mobile] sample application demonstrating the Site Preference capabilit
 [Spring Mobile] is released under version 2.0 of the [Apache License].
 
 
-[app-url]: http://localhost:8080/lite-site-preference-handler
 [Spring Mobile]: http://projects.spring.io/spring-mobile
 [Apache License]: http://www.apache.org/licenses/LICENSE-2.0
