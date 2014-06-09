@@ -28,14 +28,14 @@ import org.springframework.context.annotation.ComponentScan;
 public class Application {
 
 //	@Autowired
-//	public InternalResourceViewResolver internalResourceViewResolver;
+//	public ThymeleafViewResolver thymeleafViewResolver;
 //
 //	@Bean
-//	public LiteDeviceDelegatingViewResolver deviceDelegatingViewResolver() {
-//		LiteDeviceDelegatingViewResolver resolver = new LiteDeviceDelegatingViewResolver(internalResourceViewResolver);
+//	public LiteDeviceDelegatingViewResolver liteDeviceDelegatingViewResolver() {
+//		LiteDeviceDelegatingViewResolver resolver = new LiteDeviceDelegatingViewResolver(thymeleafViewResolver);
 //		resolver.setMobilePrefix("mobile/");
 //		resolver.setTabletPrefix("tablet/");
-//		resolver.setOrder(internalResourceViewResolver.getOrder() - 1);
+//		resolver.setOrder(thymeleafViewResolver.getOrder() - 1);
 //		return resolver;
 //	}
 

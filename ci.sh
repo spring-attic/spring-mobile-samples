@@ -9,6 +9,7 @@ function build {
     fi
 }
 
+build lite-device-delegating-view-resolver
 build lite-device-delegating-view-resolver-jsp
 build archive/java-configuration/lite-device-delegating-view-resolver-jc
 build archive/java-configuration/lite-device-delegating-view-resolver-jc-thymeleaf

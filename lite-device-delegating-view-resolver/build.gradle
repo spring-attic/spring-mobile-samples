@@ -18,7 +18,7 @@ apply plugin: "idea"
 apply plugin: "spring-boot"
 
 jar {
-	baseName = "lite-device-delegating-view-resolver-jsp"
+	baseName = "lite-device-delegating-view-resolver"
 	version =  "0.1.0"
 }
 
@@ -27,12 +27,9 @@ repositories {
 }
 
 dependencies {
-	compile("org.springframework.boot:spring-boot-starter-web")
+	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
 	compile("org.springframework.boot:spring-boot-starter-mobile")
 	compile("org.springframework.mobile:spring-mobile-device:1.1.2.BUILD-SNAPSHOT")
-	compile("javax.servlet:jstl")
-	provided("org.springframework.boot:spring-boot-starter-tomcat")
-	provided("org.apache.tomcat.embed:tomcat-embed-jasper")
 	testCompile("org.springframework.boot:spring-boot-starter-test")
 }
 
