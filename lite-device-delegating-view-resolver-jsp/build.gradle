@@ -1,9 +1,10 @@
 buildscript {
 	repositories {
+		maven { url "http://repo.spring.io/libs-staging-local" }
 		maven { url "http://repo.spring.io/plugins-release" }
 	}
 	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.0.RC1")
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.0.RELEASE")
 		classpath("org.springframework.build.gradle:propdeps-plugin:0.0.6")
 	}
 }
@@ -23,13 +24,13 @@ jar {
 }
 
 repositories {
-	maven { url "http://repo.spring.io/libs-snapshot" }
+	maven { url "http://repo.spring.io/libs-staging-local" }
+	maven { url "http://repo.spring.io/libs-release" }
 }
 
 dependencies {
 	compile("org.springframework.boot:spring-boot-starter-web")
 	compile("org.springframework.boot:spring-boot-starter-mobile")
-	compile("org.springframework.mobile:spring-mobile-device:1.1.2.BUILD-SNAPSHOT")
 	compile("javax.servlet:jstl")
 	provided("org.springframework.boot:spring-boot-starter-tomcat")
 	provided("org.apache.tomcat.embed:tomcat-embed-jasper")
