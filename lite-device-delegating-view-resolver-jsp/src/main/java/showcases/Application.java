@@ -27,18 +27,6 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan
 public class Application {
 
-//	@Autowired
-//	public InternalResourceViewResolver internalResourceViewResolver;
-//
-//	@Bean
-//	public LiteDeviceDelegatingViewResolver deviceDelegatingViewResolver() {
-//		LiteDeviceDelegatingViewResolver resolver = new LiteDeviceDelegatingViewResolver(internalResourceViewResolver);
-//		resolver.setMobilePrefix("mobile/");
-//		resolver.setTabletPrefix("tablet/");
-//		resolver.setOrder(internalResourceViewResolver.getOrder() - 1);
-//		return resolver;
-//	}
-
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}
