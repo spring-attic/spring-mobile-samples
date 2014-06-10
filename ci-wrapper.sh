@@ -8,6 +8,7 @@ function wrapper {
 }
 
 wrapper lite-device-delegating-view-resolver
+wrapper lite-device-delegating-view-resolver-jsp
 wrapper archive/java-configuration/lite-device-delegating-view-resolver-jc
 wrapper archive/java-configuration/lite-device-delegating-view-resolver-jc-thymeleaf
 wrapper archive/xml-configuration/lite-device-delegating-view-resolver-xml
