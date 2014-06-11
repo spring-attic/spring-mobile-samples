@@ -7,7 +7,7 @@
 
 ## Sample Applications
 
-The following sample applications demonstrate the capabilities of [Spring Mobile] and [Spring Boot] auto-configuration. Each sample app utilizes [Spring Boot] auto-configuration. See the README within each sample project for more information and additional instructions.
+The following sample applications demonstrate the capabilities of [Spring Mobile] server-side device detection and [Spring Boot] auto-configuration. See the README within each sample project for more information and additional instructions.
 
  - [lite-device-delegating-view-resolver] - sample app showing view names adjusted based on device type
  - [lite-device-delegating-view-resolver-jsp] - JSP alternative illustrating adjusted views
