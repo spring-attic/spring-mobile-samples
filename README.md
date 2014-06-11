@@ -9,11 +9,10 @@
 
 The following sample applications demonstrate the capabilities of [Spring Mobile] server-side device detection and [Spring Boot] auto-configuration. See the README within each sample project for more information and additional instructions.
 
- - [lite-device-delegating-view-resolver] - sample app showing view names adjusted based on device type
- - [lite-device-delegating-view-resolver-jsp] - JSP alternative illustrating adjusted views
  - [lite-device-resolver] - DeviceResolver functionality and usage 
  - [lite-site-preference-handler-jsp] - SitePreferenceHandler functionality with JSP views
-
+ - [lite-device-delegating-view-resolver] - sample app showing view names adjusted based on device type
+ - [lite-device-delegating-view-resolver-jsp] - JSP alternative illustrating adjusted views
  
 ## Archived Sample Applications
 
