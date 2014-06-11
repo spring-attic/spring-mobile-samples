@@ -12,7 +12,7 @@ The following sample applications demonstrate the capabilities of [Spring Mobile
  - [lite-device-delegating-view-resolver] - sample app showing view names adjusted based on device type
  - [lite-device-delegating-view-resolver-jsp] - JSP alternative illustrating adjusted views
  - [lite-device-resolver] - DeviceResolver functionality and usage 
- - [lite-site-preference-handler] - SitePreferenceHandler functionality
+ - [lite-site-preference-handler-jsp] - SitePreferenceHandler functionality with JSP views
 
  
 ## Archived Sample Applications
@@ -37,7 +37,7 @@ There are several sample applications that illustrate Java or XML based configur
 [lite-device-delegating-view-resolver]: ./lite-device-delegating-view-resolver
 [lite-device-delegating-view-resolver-jsp]: ./lite-device-delegating-view-resolver-jsp
 [lite-device-resolver]: ./lite-device-resolver
-[lite-site-preference-handler]: ./lite-site-preference-handler
+[lite-site-preference-handler-jsp]: ./lite-site-preference-handler-jsp
 [Pull requests]: http://help.github.com/send-pull-requests
 [contributor guidelines]: CONTRIBUTING.md
 [Apache license]: http://www.apache.org/licenses/LICENSE-2.0
