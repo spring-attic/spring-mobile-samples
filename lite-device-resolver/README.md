@@ -1,6 +1,10 @@
 # lite-device-resolver
 
-A [Spring Mobile] sample application demonstrating the Device Resolver capabilities of the Spring Mobile Device module.
+A [Spring Mobile] sample application demonstrating the Device Resolver capabilities of the Spring Mobile Device module, including:
+
+* "Lite" device resolution through the use of DeviceResolverHandlerInterceptor 
+* Spring Boot auto-configuration
+* Thymeleaf views
 
 
 ## Build and Deploy
@@ -30,7 +34,7 @@ A [Spring Mobile] sample application demonstrating the Device Resolver capabilit
 
 3. View the sample application at the following URL:
 
-    [http://localhost:8080/]()
+    [http://localhost:8080/](http://localhost:8080/)
 
 
 ## License
@@ -39,4 +43,5 @@ A [Spring Mobile] sample application demonstrating the Device Resolver capabilit
 
 
 [Spring Mobile]: http://projects.spring.io/spring-mobile
+[Spring Boot]: http://projects.spring.io/spring-boot
 [Apache License]: http://www.apache.org/licenses/LICENSE-2.0

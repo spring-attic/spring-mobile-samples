@@ -4,8 +4,18 @@ A [Spring Mobile] sample application demonstrating many of the capabilities of t
 
 * "Lite" device resolution through the use of DeviceResolverHandlerInterceptor 
 * Site preference management via SitePreferenceHandlerInterceptor
+* Spring Boot auto-configuration
 * JSP views
-* Spring Boot autoconfiguration
+
+
+## Auto-configuration
+
+[Spring Boot] support is enabled through a property defined in `application.properties`. By default `SitePreferenceHandlerInterceptor` is enabled in Spring Mobile auto-configuration. If the following property is set to false, then this feature will be disabled.
+
+`src/main/resources/application.properties`
+```
+spring.mobile.sitepreference.enabled: false
+```
 
 
 ## Build and Deploy
@@ -36,7 +46,7 @@ A [Spring Mobile] sample application demonstrating many of the capabilities of t
 
 3. View the sample application at the following URL:
 
-    [http://localhost:8080/]()
+    [http://localhost:8080/](http://localhost:8080/)
 
 
 
@@ -46,4 +56,5 @@ A [Spring Mobile] sample application demonstrating many of the capabilities of t
 
 
 [Spring Mobile]: http://projects.spring.io/spring-mobile
+[Spring Boot]: http://projects.spring.io/spring-boot
 [Apache License]: http://www.apache.org/licenses/LICENSE-2.0
