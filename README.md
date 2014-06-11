@@ -7,16 +7,17 @@
 
 ## Sample Applications
 
-The following sample applications demonstrate the capabilities of [Spring Mobile] for server-side device detection and handling. See the README within each sample project for more information and additional instructions.
+The following sample applications demonstrate the capabilities of [Spring Mobile] and [Spring Boot] auto-configuration. Each sample app utilizes [Spring Boot] auto-configuration. See the README within each sample project for more information and additional instructions.
 
- - [lite-device-delegating-view-resolver] - example showing view names adjusted based on device
+ - [lite-device-delegating-view-resolver] - sample app showing view names adjusted based on device type
+ - [lite-device-delegating-view-resolver-jsp] - JSP alternative illustrating adjusted views
  - [lite-device-resolver] - DeviceResolver functionality and usage 
  - [lite-site-preference-handler] - SitePreferenceHandler functionality
 
  
 ## Archived Sample Applications
 
-There are several sample applications that illustrate Java or XML based configuration that have been archived, as Spring Boot is now the preferred way of building and configuring a Spring application. These sample apps have been moved to the `archive` folder.
+There are several sample applications that illustrate Java or XML based configuration that have been archived, as Spring Boot is now the preferred way of building and configuring a Spring application. These sample apps have been moved to the [`archive`](archive/) folder.
  
 
 ## Contribute
@@ -30,20 +31,13 @@ There are several sample applications that illustrate Java or XML based configur
 
 
 [Spring Mobile]: http://projects.spring.io/spring-mobile
+[Spring Boot]: http://projects.spring.io/spring-boot
 [Spring Web MVC]: http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html
 [Spring Mobile on GitHub]: https://github.com/spring-projects/spring-mobile
 [lite-device-delegating-view-resolver]: ./lite-device-delegating-view-resolver
-[lite-device-delegating-view-resolver-jc]: ./lite-device-delegating-view-resolver-jc
-[lite-device-delegating-view-resolver-jc-thymeleaf]: ./lite-device-delegating-view-resolver-jc-thymeleaf
-[lite-device-delegating-view-resolver-xml]: ./lite-device-delegating-view-resolver-xml
+[lite-device-delegating-view-resolver-jsp]: ./lite-device-delegating-view-resolver-jsp
 [lite-device-resolver]: ./lite-device-resolver
-[lite-device-resolver-jc]: ./lite-device-resolver-jc
-[lite-device-resolver-xml]: ./lite-device-resolver-xml
 [lite-site-preference-handler]: ./lite-site-preference-handler
-[lite-site-preference-handler-jc]: ./lite-site-preference-handler-jc
-[lite-site-switcher-handler-jc-mdot]: ./lite-site-switcher-handler-jc-mdot
-[lite-site-switcher-handler-jc-urlpath]: ./lite-site-switcher-handler-jc-urlpath
-[thorax-lumbar-client]: ./thorax-lumbar-client
 [Pull requests]: http://help.github.com/send-pull-requests
 [contributor guidelines]: CONTRIBUTING.md
 [Apache license]: http://www.apache.org/licenses/LICENSE-2.0
