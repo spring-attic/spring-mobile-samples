@@ -18,7 +18,7 @@ apply plugin: "idea"
 apply plugin: "spring-boot"
 
 jar {
-	baseName = "lite-site-preference-handler"
+	baseName = "lite-site-preference-handler-jsp"
 	version =  "0.1.0"
 }
 

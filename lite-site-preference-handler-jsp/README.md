@@ -1,4 +1,4 @@
-# lite-site-preference-handler
+# lite-site-preference-handler-jsp
 
 A [Spring Mobile] sample application demonstrating many of the capabilities of the Spring Mobile Device module, including:
 
