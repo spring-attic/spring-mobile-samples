@@ -1,6 +1,5 @@
 buildscript {
 	repositories {
-		maven { url "http://repo.spring.io/libs-staging-local" }
 		maven { url "http://repo.spring.io/plugins-release" }
 	}
 	dependencies {
@@ -24,7 +23,6 @@ jar {
 }
 
 repositories {
-	maven { url "http://repo.spring.io/libs-staging-local" }
 	maven { url "http://repo.spring.io/libs-release" }
 }
 

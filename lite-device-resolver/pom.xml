@@ -58,20 +58,12 @@
 
 	<repositories>
 		<repository>
-			<id>spring-release-staging</id>
-			<url>http://repo.spring.io/libs-staging-local</url>
-		</repository>
-		<repository>
 			<id>spring-releases</id>
 			<url>http://repo.spring.io/libs-release</url>
 		</repository>
 	</repositories>
 
 	<pluginRepositories>
-		<pluginRepository>
-			<id>spring-release-staging</id>
-			<url>http://repo.spring.io/libs-staging-local</url>
-		</pluginRepository>
 		<pluginRepository>
 			<id>spring-releases</id>
 			<url>http://repo.spring.io/plugins-release</url>
