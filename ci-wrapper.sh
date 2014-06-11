@@ -15,7 +15,7 @@ wrapper archive/xml-configuration/lite-device-delegating-view-resolver-xml
 wrapper lite-device-resolver
 wrapper archive/java-configuration/lite-device-resolver-jc
 wrapper archive/xml-configuration/lite-device-resolver-xml
-wrapper lite-site-preference-handler
+wrapper lite-site-preference-handler-jsp
 wrapper archive/java-configuration/lite-site-preference-handler-jc
 wrapper archive/java-configuration/lite-site-switcher-handler-jc-mdot
 wrapper archive/java-configuration/lite-site-switcher-handler-jc-urlpath

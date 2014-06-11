@@ -10,7 +10,7 @@ function build {
 }
 
 build lite-device-resolver
-build lite-site-preference-handler
+build lite-site-preference-handler-jsp
 build lite-device-delegating-view-resolver
 build lite-device-delegating-view-resolver-jsp
 build archive/java-configuration/lite-device-resolver-jc
