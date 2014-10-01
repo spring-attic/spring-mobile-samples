@@ -17,7 +17,7 @@ sourceCompatibility=1.6
 targetCompatibility=1.6
 
 ext.springVersion =       "4.0.5.RELEASE"
-ext.springMobileVersion = "1.1.1.RELEASE"
+ext.springMobileVersion = "1.1.2.RELEASE"
 ext.aspectJVersion =      "1.6.9"
 ext.cglibVersion =        "2.2"
 ext.slf4jVersion =        "1.6.1"
