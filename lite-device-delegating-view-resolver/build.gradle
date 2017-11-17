@@ -1,21 +1,26 @@
 buildscript {
 	repositories {
 		maven { url "http://repo.spring.io/plugins-release" }
+		maven { url "http://repo.spring.io/libs-milestone" }
 	}
 	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.7.RELEASE")
-		classpath("org.springframework.build.gradle:propdeps-plugin:0.0.7")
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.0.M6")
+		classpath("io.spring.gradle:propdeps-plugin:0.0.9.RELEASE")
 	}
 }
+
+ext.springMobileVersion = "2.0.0.M2"
 
 apply plugin: "java"
 apply plugin: "propdeps"
 apply plugin: "propdeps-maven"
 apply plugin: "propdeps-idea"
 apply plugin: "propdeps-eclipse"
-apply plugin: "eclipse"
 apply plugin: "idea"
-apply plugin: "spring-boot"
+apply plugin: "eclipse"
+apply plugin: "org.springframework.boot"
+apply plugin: "io.spring.dependency-management"
+
 
 jar {
 	baseName = "lite-device-delegating-view-resolver"
@@ -24,14 +29,18 @@ jar {
 
 repositories {
 	maven { url "http://repo.spring.io/libs-release" }
+	maven { url "http://repo.spring.io/libs-milestone" }
+	maven { url "http://repo.spring.io/libs-snapshot" }
 }
 
 dependencies {
+	compile("org.springframework.boot:spring-boot-starter")
+	compile("org.springframework.boot:spring-boot-starter-web")
 	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
-	compile("org.springframework.boot:spring-boot-starter-mobile")
+	compile("org.springframework.mobile:spring-mobile-starter:${springMobileVersion}")
 	testCompile("org.springframework.boot:spring-boot-starter-test")
 }
 
 task wrapper(type: Wrapper) {
-	gradleVersion = "2.1"
+	gradleVersion = "4.3.1"
 }

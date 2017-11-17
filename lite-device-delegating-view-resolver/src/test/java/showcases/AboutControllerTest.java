@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2014 the original author or authors.
+ * Copyright 2010-2017 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,27 +17,52 @@
 package showcases;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+/**
+ * @author Roy Clarkson
+ */
+@RunWith(SpringRunner.class)
+@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class AboutControllerTest {
 
-	private AboutController controller = new AboutController();
+	@Autowired
+	private TestRestTemplate rest;
 
 	@Test
-	public void homePageMobileSitePreference() {
-		// Model model = new ExtendedModelMap();
-		// assertEquals("about", controller.home(SitePreference.MOBILE, model));
+	public void normal() {
+		HttpHeaders requestHeaders = new HttpHeaders();
+		requestHeaders.set(HttpHeaders.USER_AGENT, "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.12) Gecko/20101026 Firefox/3.6.12");
+		ResponseEntity<String> response = rest.exchange("/about", HttpMethod.GET, new HttpEntity<>(requestHeaders), String.class);
+		assertThat(response.getBody()).contains("About [Normal]");
 	}
 
 	@Test
-	public void homePageTabletSitePreference() {
-		// Model model = new ExtendedModelMap();
-		// assertEquals("about", controller.home(SitePreference.TABLET, model));
+	public void mobile() {
+		HttpHeaders requestHeaders = new HttpHeaders();
+		requestHeaders.set(HttpHeaders.USER_AGENT, "Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53");
+		ResponseEntity<String> response = rest.exchange("/about", HttpMethod.GET, new HttpEntity<>(requestHeaders), String.class);
+		assertThat(response.getBody()).contains("About [Mobile]");
 	}
 
 	@Test
-	public void homePageNormalSitePreference() {
-		// Model model = new ExtendedModelMap();
-		// assertEquals("about", controller.home(SitePreference.NORMAL, model));
+	public void tablet() {
+		HttpHeaders requestHeaders = new HttpHeaders();
+		requestHeaders.set(HttpHeaders.USER_AGENT, "Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53");
+		ResponseEntity<String> response = rest.exchange("/about", HttpMethod.GET, new HttpEntity<>(requestHeaders), String.class);
+		assertThat(response.getBody()).contains("About [Tablet]");
 	}
 
 }
