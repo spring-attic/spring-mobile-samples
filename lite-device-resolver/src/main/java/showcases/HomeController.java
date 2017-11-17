@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2014 the original author or authors.
+ * Copyright 2010-2017 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,35 +16,28 @@
 
 package showcases;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.mobile.device.Device;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Handles requests for the sample application.
  *
  * @author Roy Clarkson
  */
-@Controller
+@RestController
 public class HomeController {
 
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-
 	@RequestMapping("/")
-	public String home(Device device, Model model) {
-		if (device == null) {
-			logger.info("no device detected");
-		} else if (device.isNormal()) {
-			logger.info("Device is normal");
+	public String home(Device device) {
+		if (device.isNormal()) {
+			return "Device is NORMAL";
 		} else if (device.isMobile()) {
-			logger.info("Device is mobile");
+			return "Device is MOBILE";
 		} else if (device.isTablet()) {
-			logger.info("Device is tablet");
+			return "Device is TABLET";
 		}
-		return "home";
+		return "Unable to resolve the device type";
 	}
 
 }
