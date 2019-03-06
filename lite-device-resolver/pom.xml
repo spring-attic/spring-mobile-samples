@@ -68,7 +68,7 @@
 	<pluginRepositories>
 		<pluginRepository>
 			<id>spring-releases</id>
-			<url>http://repo.spring.io/plugins-release</url>
+			<url>https://repo.spring.io/plugins-release</url>
 		</pluginRepository>
 	</pluginRepositories>
 

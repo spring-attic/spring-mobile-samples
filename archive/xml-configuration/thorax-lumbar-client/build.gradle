@@ -57,10 +57,10 @@ dependencies {
 }
 
 repositories {
-	mavenRepo urls: "http://maven.springframework.org/release"
-	mavenRepo urls: "http://maven.springframework.org/milestone"
-	mavenRepo urls: "http://maven.springframework.org/snapshot"
-	mavenRepo urls: "http://download.java.net/maven/2"
+	mavenRepo urls: "https://maven.springframework.org/release"
+	mavenRepo urls: "https://maven.springframework.org/milestone"
+	mavenRepo urls: "https://maven.springframework.org/snapshot"
+	mavenRepo urls: "https://download.java.net/maven/2"
 	mavenCentral()
 }
 
@@ -94,7 +94,7 @@ buildscript {
     repositories {
         add(new org.apache.ivy.plugins.resolver.URLResolver()) {
             name = "GitHub"
-            addArtifactPattern "http://cloud.github.com/downloads/[organisation]/[module]/[module]-[revision].[ext]"
+            addArtifactPattern "https://cloud.github.com/downloads/[organisation]/[module]/[module]-[revision].[ext]"
         }
     }
 

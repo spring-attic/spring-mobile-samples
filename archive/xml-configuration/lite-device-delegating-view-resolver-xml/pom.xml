@@ -8,12 +8,12 @@
 	<version>0.1.0</version>
 	<packaging>war</packaging>
 	<name>lite-device-delegating-view-resolver-xml</name>
-	<url>http://www.spring.io</url>
+	<url>https://www.spring.io</url>
 	<description>Demonstration of Spring Mobile's lightweight server-side device detection and site switching functionality</description>
 	<inceptionYear>2010</inceptionYear>
 	<organization>
 		<name>Spring</name>
-		<url>http://www.spring.io</url>
+		<url>https://www.spring.io</url>
 	</organization>
 
 	<properties>
@@ -138,7 +138,7 @@
 		<repository>
 			<id>spring-repository</id>
 			<name>Spring Repository</name>
-			<url>http://repo.spring.io/libs-release</url>
+			<url>https://repo.spring.io/libs-release</url>
 		</repository>
 	</repositories>
 
