@@ -62,11 +62,11 @@ In order to build this application, you must have Lumbar installed. You do not n
 [Spring Mobile] is released under version 2.0 of the [Apache License].
 
 
-[Spring Mobile]: http://projects.spring.io/spring-mobile
-[Lumbar]: http://walmartlabs.github.com/lumbar/
-[Thorax]: http://walmartlabs.github.com/thorax/
-[WalmartLabs]: http://www.walmartlabs.com/
-[Backbone]: http://backbonejs.org/
-[Gradle]: http://www.gradle.org/
+[Spring Mobile]: https://projects.spring.io/spring-mobile
+[Lumbar]: https://walmartlabs.github.com/lumbar/
+[Thorax]: https://walmartlabs.github.com/thorax/
+[WalmartLabs]: https://www.walmartlabs.com/
+[Backbone]: https://backbonejs.org/
+[Gradle]: https://www.gradle.org/
 [app-url]: http://localhost:8080/thorax-client
 [Apache License]: http://www.apache.org/licenses/LICENSE-2.0

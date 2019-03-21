@@ -48,6 +48,6 @@ A [Spring Mobile] sample application demonstrating the [`mDot`] Site Switcher st
 [Spring Mobile] is released under version 2.0 of the [Apache License].
 
 
-[`mDot`]: http://docs.spring.io/spring-mobile/docs/1.1.x/reference/html/device.html#site-switcher-handler-interceptor-mdot
-[Spring Mobile]: http://projects.spring.io/spring-mobile
+[`mDot`]: https://docs.spring.io/spring-mobile/docs/1.1.x/reference/html/device.html#site-switcher-handler-interceptor-mdot
+[Spring Mobile]: https://projects.spring.io/spring-mobile
 [Apache License]: http://www.apache.org/licenses/LICENSE-2.0

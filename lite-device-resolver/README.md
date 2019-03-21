@@ -42,6 +42,6 @@ A [Spring Mobile] sample application demonstrating the Device Resolver capabilit
 [Spring Mobile] is released under version 2.0 of the [Apache License].
 
 
-[Spring Mobile]: http://projects.spring.io/spring-mobile
-[Spring Boot]: http://projects.spring.io/spring-boot
+[Spring Mobile]: https://projects.spring.io/spring-mobile
+[Spring Boot]: https://projects.spring.io/spring-boot
 [Apache License]: http://www.apache.org/licenses/LICENSE-2.0
