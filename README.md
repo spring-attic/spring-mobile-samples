@@ -39,4 +39,4 @@ There are several sample applications that illustrate Java or XML based configur
 [lite-site-preference-handler-jsp]: ./lite-site-preference-handler-jsp
 [Pull requests]: https://help.github.com/send-pull-requests
 [contributor guidelines]: CONTRIBUTING.md
-[Apache license]: http://www.apache.org/licenses/LICENSE-2.0
+[Apache license]: https://www.apache.org/licenses/LICENSE-2.0

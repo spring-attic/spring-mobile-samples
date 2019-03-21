@@ -69,4 +69,4 @@ In order to build this application, you must have Lumbar installed. You do not n
 [Backbone]: https://backbonejs.org/
 [Gradle]: https://www.gradle.org/
 [app-url]: http://localhost:8080/thorax-client
-[Apache License]: http://www.apache.org/licenses/LICENSE-2.0
+[Apache License]: https://www.apache.org/licenses/LICENSE-2.0

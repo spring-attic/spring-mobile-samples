@@ -50,4 +50,4 @@ A [Spring Mobile] sample application demonstrating the [`mDot`] Site Switcher st
 
 [`mDot`]: https://docs.spring.io/spring-mobile/docs/1.1.x/reference/html/device.html#site-switcher-handler-interceptor-mdot
 [Spring Mobile]: https://projects.spring.io/spring-mobile
-[Apache License]: http://www.apache.org/licenses/LICENSE-2.0
+[Apache License]: https://www.apache.org/licenses/LICENSE-2.0
