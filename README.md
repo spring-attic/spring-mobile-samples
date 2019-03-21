@@ -29,14 +29,14 @@ There are several sample applications that illustrate Java or XML based configur
 [Spring Mobile] is released under version 2.0 of the [Apache License].
 
 
-[Spring Mobile]: http://projects.spring.io/spring-mobile
-[Spring Boot]: http://projects.spring.io/spring-boot
-[Spring Web MVC]: http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html
+[Spring Mobile]: https://projects.spring.io/spring-mobile
+[Spring Boot]: https://projects.spring.io/spring-boot
+[Spring Web MVC]: https://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html
 [Spring Mobile on GitHub]: https://github.com/spring-projects/spring-mobile
 [lite-device-delegating-view-resolver]: ./lite-device-delegating-view-resolver
 [lite-device-delegating-view-resolver-jsp]: ./lite-device-delegating-view-resolver-jsp
 [lite-device-resolver]: ./lite-device-resolver
 [lite-site-preference-handler-jsp]: ./lite-site-preference-handler-jsp
-[Pull requests]: http://help.github.com/send-pull-requests
+[Pull requests]: https://help.github.com/send-pull-requests
 [contributor guidelines]: CONTRIBUTING.md
 [Apache license]: http://www.apache.org/licenses/LICENSE-2.0

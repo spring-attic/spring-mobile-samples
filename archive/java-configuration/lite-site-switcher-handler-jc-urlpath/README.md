@@ -45,6 +45,6 @@ A [Spring Mobile] sample application demonstrating many of the capabilities of t
 [Spring Mobile] is released under version 2.0 of the [Apache License].
 
 
-[`urlPath`]: http://docs.spring.io/spring-mobile/docs/1.1.x/reference/html/device.html#site-switcher-handler-interceptor-urlpath
-[Spring Mobile]: http://projects.spring.io/spring-mobile
+[`urlPath`]: https://docs.spring.io/spring-mobile/docs/1.1.x/reference/html/device.html#site-switcher-handler-interceptor-urlpath
+[Spring Mobile]: https://projects.spring.io/spring-mobile
 [Apache License]: http://www.apache.org/licenses/LICENSE-2.0
