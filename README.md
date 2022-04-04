@@ -1,3 +1,5 @@
+# spring-mobile-samples is no longer actively maintained by VMware, Inc.
+
 # Spring Mobile Samples
 
 [!["Build Status"](https://build.spring.io/plugins/servlet/buildStatusImage/MOBILE-SAMPLES)](https://build.spring.io/browse/MOBILE-SAMPLES)
