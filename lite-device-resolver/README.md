@@ -44,4 +44,4 @@ A [Spring Mobile] sample application demonstrating the Device Resolver capabilit
 
 [Spring Mobile]: https://projects.spring.io/spring-mobile
 [Spring Boot]: https://projects.spring.io/spring-boot
-[Apache License]: http://www.apache.org/licenses/LICENSE-2.0
+[Apache License]: https://www.apache.org/licenses/LICENSE-2.0

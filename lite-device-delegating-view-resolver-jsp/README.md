@@ -59,4 +59,4 @@ spring.mobile.devicedelegatingviewresolver.enabled: true
 
 [Spring Mobile]: https://projects.spring.io/spring-mobile
 [Spring Boot]: https://projects.spring.io/spring-boot
-[Apache License]: http://www.apache.org/licenses/LICENSE-2.0
+[Apache License]: https://www.apache.org/licenses/LICENSE-2.0

@@ -47,4 +47,4 @@ A [Spring Mobile] sample application demonstrating many of the capabilities of t
 
 
 [Spring Mobile]: https://projects.spring.io/spring-mobile
-[Apache License]: http://www.apache.org/licenses/LICENSE-2.0
+[Apache License]: https://www.apache.org/licenses/LICENSE-2.0
