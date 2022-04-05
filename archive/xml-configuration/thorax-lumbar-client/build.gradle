@@ -61,7 +61,7 @@ repositories {
 	mavenRepo urls: "https://maven.springframework.org/milestone"
 	mavenRepo urls: "https://maven.springframework.org/snapshot"
 	mavenRepo urls: "https://download.java.net/maven/2"
-	mavenCentral()
+	maven { url 'https://repo.maven.apache.org/maven2/' }
 }
 
 task wrapper(type: Wrapper) {
